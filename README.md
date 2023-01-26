@@ -1,4 +1,6 @@
-# Software Engineering Project for CEN3031 (SPRING 2023)
+# Software Engineering Project for CEN3031
+
+SPRING 2023
 
 ## RECIPE BOOK / MEAL PLANNER
 
@@ -59,6 +61,10 @@ Additional files supplementing the base Angular project are based on [this tutor
 
 1. Clone the repo
 2. Install dependencies: `npm run install-dependencies`
-3. Build the Angular project: `ng build`
-4. Run the app with gin: `npm run start`
+3. Build & run the front-end: `npm run client` (leave this running)
+4. Build & run the back-end: `npm run server` (leave this running)
 5. Navigate to `http://localhost:4200/`
+
+*Note these instructions are a WIP (work in progress) and your mileage may vary*  
+I have only done this on Win 11 so far.  
+Please create an issue if this doesn't work for you!  
