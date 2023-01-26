@@ -2,14 +2,14 @@
   "name": "go-angular",
   "version": "0.0.0",
   "scripts": {
+    "install-dependencies": "npm install && go get ./src/server/...",
+    "client": "ng serve",
+    "server": "go run ./src/server/main.go",
     "ng": "ng",
-    "start": "ng serve & go run ./src/server/main.go",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "go-server": "go run ./src/server/main.go",
-    "lint": "ng lint",
-    "install-dependencies": "npm install && go get github.com/codegangsta/gin && go get ./src/server/..."
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
