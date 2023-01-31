@@ -16,3 +16,5 @@
 ## WHAT DIDN'T WORK
 
 - TBD
+
+- as a user I want to be able to add a recipe
