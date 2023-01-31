@@ -18,6 +18,7 @@ Users can search for recipes to import via an external API as well.
 > Syeda Zahra Mahmood  
 > Jacob McLaren  
 > Kathleen Minckler
+> Linette Velez
 
 ## Base Angular project
 
