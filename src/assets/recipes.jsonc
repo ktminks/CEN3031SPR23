@@ -1,0 +1,27 @@
+/* schema:
+ recipe {
+    name: string,
+    ingredients: string,
+    instructions: string,
+    image: string,
+    tags: string,
+    rating: number,
+    notes: string,
+    source: string,
+    date: date,
+    id: number
+}
+*/
+
+{
+  "name": "Pasta with Tomato Sauce",
+  "ingredients": "1 lb pasta, 1 can tomato sauce, 1 can diced tomatoes, 1 onion, 1 clove garlic, 1 tbsp olive oil, 1 tbsp butter, 1 tbsp sugar, 1 tsp salt, 1 tsp pepper, 1 tsp oregano, 1 tsp basil",
+  "instructions": "1. Cook pasta in salted water until al dente. 2. Heat olive oil and butter in a large skillet over medium heat. 3. Add onion and garlic and cook until soft. 4. Add tomato sauce, diced tomatoes, sugar, salt, pepper, oregano, and basil. 5. Simmer for 10 minutes. 6. Add cooked pasta to sauce and stir to combine.",
+  "image": "https://www.simplyrecipes.com/wp-content/uploads/2018/08/italian-sausage-pasta-horiz-a-1800.jpg",
+  "tags": "pasta, tomato, sauce",
+  "rating": 4,
+  "notes": "This is a great recipe for a quick weeknight meal.",
+  "source": "https://www.simplyrecipes.com/recipes/italian_sausage_pasta/",
+  "date": "2020-10-01",
+  "id": 1
+}
