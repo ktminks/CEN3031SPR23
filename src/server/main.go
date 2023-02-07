@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoAngular/src/server/utils"
+	"RecipeBook/src/server/utils"
 	"fmt"
 	"log"
 	"net/http"
