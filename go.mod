@@ -1,4 +1,4 @@
-module GoAngular
+module RecipeBook
 
 go 1.13
 
