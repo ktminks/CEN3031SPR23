@@ -7,8 +7,8 @@ export interface Ingredient {
 // create template for recipes, enforcing these properties
 export interface Recipe {
   name: string;
-  ingredients: Ingredient[];
-  instructions: [string];
+  ingredients: string;
+  instructions: string;
   image: string;
   tags: string;
   rating: number;
