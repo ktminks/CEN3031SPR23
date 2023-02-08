@@ -19,3 +19,7 @@ We successfully completed a minimal initial version of the frontend and backend,
 ## Issues Not Successfully Completed & Why?
 
 Technical issues caused by initial interactions with GitHub led to loss of code, progress, and morale.
+
+## Demo Videos
+
+[Frontend demo](https://youtu.be/Na8VorvlPqc)
