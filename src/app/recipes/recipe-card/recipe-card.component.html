@@ -9,14 +9,15 @@
       <mat-card-content>
         <h3>Ingredients:</h3>
         <ul>
-          <li>
-            {{ recipe.ingredients.split(",") }}
+          <li *ngFor="let ingredient of recipe.ingredients">
+            {{ ingredient.name }} - {{ ingredient.amount }}
+            {{ ingredient.amountType }}
           </li>
         </ul>
         <h3>Instructions:</h3>
         <ol>
-          <li>
-            {{ recipe.instructions.split(",") }}
+          <li *ngFor="let step of recipe.instructions">
+            {{ step }}
           </li>
         </ol>
       </mat-card-content>
