@@ -1,3 +1,21 @@
+/* schema:
+ recipe {
+    name: string,
+    ingredients: [{
+        name: string,
+        amount: number,
+        amountType: string
+    }],
+    instructions: [string],
+    image: string,
+    tags: string,
+    rating: number,
+    notes: string,
+    source: string,
+    date: date,
+    id: number
+}
+*/
 export interface Ingredient {
   name: string;
   amount: number;
@@ -17,5 +35,3 @@ export interface Recipe {
   date: Date;
   id: number;
 }
-
-// This isn't being used yet -- needs code to enforce it
