@@ -18,8 +18,9 @@ We successfully completed a minimal initial version of the frontend and backend,
 
 ## Issues Not Successfully Completed & Why?
 
-Technical issues caused by initial interactions with GitHub led to loss of code, progress, and morale.
+Technical issues caused by initial interactions with GitHub led to loss of code, progress, and morale. Backend work had to be developed using python and SQL as JSON and Go are still being learned. Experienced issues with the command line and coding python on it, but it was ultimately resolved.
 
 ## Demo Videos
 
 [Frontend demo](https://youtu.be/Na8VorvlPqc)
+[Backend demo](https://youtu.be/czO9eg9YGtQ)
