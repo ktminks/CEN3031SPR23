@@ -13,14 +13,11 @@ export class RecipeCardComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    // serve recipes from api
-    // this.http.get<Recipe[]>('/api/recipes').subscribe((recipes) => {
-    //   this.recipes = recipes;
-    // });
-
     // serve recipes from assets [for testing]
     this.http.get<Recipe[]>('assets/recipes.json').subscribe((recipes) => {
       this.recipes = recipes;
     });
+
+    // to serve from api, use path '/api/recipes'
   }
 }

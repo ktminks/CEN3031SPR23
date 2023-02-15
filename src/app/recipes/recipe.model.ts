@@ -26,12 +26,12 @@ export interface Ingredient {
 export interface Recipe {
   name: string;
   ingredients: Ingredient[];
-  instructions: [string];
+  instructions: string[];
   image: string;
   tags: string;
   rating: number;
   notes: string;
   source: string;
-  date: Date;
+  date: string;
   id: number;
 }
