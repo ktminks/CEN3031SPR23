@@ -6,9 +6,10 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
+import { RecipesComponent } from './recipes.component';
 
 @NgModule({
-  declarations: [RecipeCardComponent],
+  declarations: [RecipeCardComponent, RecipesComponent],
   imports: [MatCardModule, MatButtonModule, MatChipsModule, CommonModule, HttpClientModule],
   exports: [MatCardModule, MatButtonModule, MatChipsModule, CommonModule, HttpClientModule],
 })

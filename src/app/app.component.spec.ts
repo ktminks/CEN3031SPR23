@@ -2,6 +2,8 @@ import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
 
+import { NavComponent } from './nav/nav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 
 describe('AppComponent', () => {
@@ -10,10 +12,11 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
+      declarations: [AppComponent, NavComponent],
       imports: [
         HttpClientTestingModule, 
-        AppRoutingModule
+        AppRoutingModule,
+        MatToolbarModule
       ],
     }).compileComponents();
   }));

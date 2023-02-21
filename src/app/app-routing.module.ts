@@ -4,11 +4,11 @@ import {
   Routes,
 } from '@angular/router';  // CLI imports router
 
-import { RecipeCardComponent } from './recipes/recipe-card/recipe-card.component';
+import { RecipesComponent } from './recipes/recipes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-  { path: 'recipes', component: RecipeCardComponent,
+  { path: 'recipes', component: RecipesComponent,
       children: [
           // { path: '', component: RecipeCardComponent},
           // { path: ':id', component: RecipeDetailComponent},
