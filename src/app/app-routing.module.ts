@@ -1,14 +1,26 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import {NgModule} from '@angular/core';
+import {
+  RouterModule,
+  Routes,
+} from '@angular/router';  // CLI imports router
 
 import { RecipeCardComponent } from './recipes/recipe-card/recipe-card.component';
 
-const routes: Routes = []; // sets up routes constant where you define your routes
+const routes: Routes = [
+  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+  { path: 'recipes', component: RecipeCardComponent,
+      children: [
+          // { path: '', component: RecipeCardComponent},
+          // { path: ':id', component: RecipeDetailComponent},
+          // { path: ':id/edit', component: RecipeEditComponent}
+      ]
+    },
+    { path: '**', redirectTo: '/recipes', pathMatch: 'full' },
+  ];
 
-// configures NgModule imports and exports
 @NgModule({
-  declarations: [RecipeCardComponent],
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [
+    RouterModule]
 })
 export class AppRoutingModule { }
