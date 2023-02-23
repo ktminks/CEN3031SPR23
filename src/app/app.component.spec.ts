@@ -1,8 +1,10 @@
 import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
-import { RecipeCardComponent } from './recipes/recipe-card/recipe-card.component';
-import { DataModule } from './core/data.module';
+
+import { NavComponent } from './nav/nav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { AppRoutingModule } from './app-routing.module';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -10,8 +12,12 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, RecipeCardComponent],
-      imports: [HttpClientTestingModule, DataModule],
+      declarations: [AppComponent, NavComponent],
+      imports: [
+        HttpClientTestingModule, 
+        AppRoutingModule,
+        MatToolbarModule
+      ],
     }).compileComponents();
   }));
 
