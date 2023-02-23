@@ -34,4 +34,28 @@ export interface Recipe {
   source: string;
   date: string;
   id: number;
+
+  
+}
+
+export class Recipe{
+  constructor(
+    public name: string,
+    public ingredients: Ingredient[],
+    public instructions: string[],
+    public image: string,
+    public tags: string,
+    public rating: number,
+    public notes: string,
+    public source: string,
+    public date: string,
+    public id: number
+  ){}
+}
+export class Ingredient{
+  constructor(
+    public name: string,
+    public amount: number,
+    public amountType: string
+  ){}
 }
