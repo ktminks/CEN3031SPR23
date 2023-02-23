@@ -25,8 +25,8 @@ export interface Ingredient {
 // create template for recipes, enforcing these properties
 export interface Recipe {
   name: string;
-  ingredients: Array<Ingredient>;
-  instructions: Array<string>;
+  ingredients: Ingredient[];
+  instructions: string[];
   image: string;
   tags: string;
   rating: number;
