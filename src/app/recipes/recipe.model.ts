@@ -25,14 +25,14 @@ export interface Ingredient {
 // create template for recipes, enforcing these properties
 export interface Recipe {
   name: string;
-  ingredients: Ingredient[];
-  instructions: [string];
+  ingredients: Array<Ingredient>;
+  instructions: Array<string>;
   image: string;
   tags: string;
   rating: number;
   notes: string;
   source: string;
-  date: Date;
+  date: string;
   id: number;
 
   
@@ -42,13 +42,13 @@ export class Recipe{
   constructor(
     public name: string,
     public ingredients: Ingredient[],
-    public instructions: [string],
+    public instructions: string[],
     public image: string,
     public tags: string,
     public rating: number,
     public notes: string,
     public source: string,
-    public date: Date,
+    public date: string,
     public id: number
   ){}
 }
