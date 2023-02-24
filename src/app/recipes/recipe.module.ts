@@ -5,10 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecipesComponent } from './recipes.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { AddRecipeButtonComponent,
-         AddRecipeDialog 
-        } from './add-recipe/add-recipe-button.component';
-import {  } from './add-recipe/add-recipe-button.component';
-import { IngredientFormComponent } from './add-recipe/ingredient-form/ingredient-form.component';
+         AddRecipeDialog } from './forms/add/add-recipe.component';
+import { EditRecipeButtonComponent,
+         EditRecipeDialog } from './forms/edit/edit-recipe.component';
+import { IngredientFormComponent } from './forms/ingredients/ingredient-form.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/material.module';
@@ -21,6 +21,8 @@ import { MaterialModule } from 'src/material.module';
     RecipeCardComponent, 
     AddRecipeButtonComponent,
     AddRecipeDialog,
+    EditRecipeButtonComponent,
+    EditRecipeDialog,
     IngredientFormComponent,
   ],
   imports: [

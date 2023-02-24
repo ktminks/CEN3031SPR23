@@ -307,9 +307,7 @@ describe('RecipesComponent', () => {
       declarations: [RecipesComponent],
       imports: [HttpClientTestingModule, RecipeModule],
     }).compileComponents();
-  }));
 
-  beforeEach(waitForAsync(() => {
     fixture = TestBed.createComponent(RecipesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

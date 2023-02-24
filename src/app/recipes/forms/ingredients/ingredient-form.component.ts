@@ -6,15 +6,15 @@ import { Ingredient} from '../../recipe.model';
   styleUrls: ['./ingredient-form.component.scss']
 })
 export class IngredientFormComponent {
-  
-
-  model = new Ingredient('',3, '');
-
+  name!: string;
+  amount!: number;
+  amountType!: string;
+  ingredient!: Ingredient;
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newIngredient() {
-    this.model = new Ingredient('',2,'');
+    this.ingredient = new Ingredient(this.name, this.amount, this.amountType);
   }
 }
