@@ -2,32 +2,42 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatIconModule } from '@angular/material/icon';
-
 import { RecipesComponent } from './recipes.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
-import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { AddRecipeButtonComponent,
+         AddRecipeDialog } from './forms/add/add-recipe.component';
+import { EditRecipeButtonComponent,
+         EditRecipeDialog } from './forms/edit/edit-recipe.component';
+import { IngredientFormComponent } from './forms/ingredients/ingredient-form.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/material.module';
+
+
 
 @NgModule({
-  declarations: [RecipeCardComponent, RecipesComponent, AddRecipeComponent],
+  declarations: [
+    RecipesComponent, 
+    RecipeCardComponent, 
+    AddRecipeButtonComponent,
+    AddRecipeDialog,
+    EditRecipeButtonComponent,
+    EditRecipeDialog,
+    IngredientFormComponent,
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
-    MatCardModule, 
-    MatButtonModule,
-    MatChipsModule,
-    MatIconModule
+    FormsModule, 
+    ReactiveFormsModule,
+    MaterialModule,
   ],
   exports: [
     CommonModule,
     HttpClientModule,
-    MatCardModule, 
-    MatButtonModule,
-    MatChipsModule,
-    MatIconModule
+    FormsModule, 
+    ReactiveFormsModule,
+    MaterialModule,
   ],
 })
 export class RecipeModule {}
