@@ -1,3 +1,6 @@
+// Cypress unit tests @ frontend
+// Likely won't be using this at all
+
 describe('Home Page', () => {
   it('should load the home page', () => {
     cy.visit('/');
