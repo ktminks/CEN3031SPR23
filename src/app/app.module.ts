@@ -1,48 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-import {MaterialExampleModule} from '../material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-
-import { RecipeModule } from './recipes/recipe.module';
 import { NavComponent } from './nav/nav.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { RecipeFormComponent, RecipeFormComponentDialog } from './recipe-form/recipe-form.component';
-import { IngredientFormComponent } from './recipe-form/ingredient-form/ingredient-form.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatDialogModule} from '@angular/material/dialog';
 
+import { AppRoutingModule } from './app-routing.module';
+import { RecipeModule } from './recipes/recipe.module';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    RecipeFormComponent, 
-    RecipeFormComponentDialog, 
-    IngredientFormComponent,
-      NavComponent,
+    NavComponent,
   ],
   imports: [
-    CommonModule,
     BrowserModule, 
     RecipeModule,
     AppRoutingModule, 
-    MatToolbarModule,
-    FormsModule, 
-    MatFormFieldModule,
-    FormsModule, 
-    ReactiveFormsModule,
-    MatNativeDateModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MaterialExampleModule,
-    BrowserAnimationsModule,],
+    BrowserAnimationsModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

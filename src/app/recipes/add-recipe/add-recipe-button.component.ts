@@ -1,19 +1,12 @@
 import { Component } from '@angular/core';
 import { Inject } from '@angular/core';
 import {
-  MatDialog,
   MAT_DIALOG_DATA,
   MatDialogRef,
+  MatDialog
 } from '@angular/material/dialog';
 
-
-Component({
-  selector: 'app-recipe-form',
-  templateUrl: './recipe-form.component.html',
-  styleUrls: ['./recipe-form.component.scss']
-})
-
-
+// ----------------- Dialog -----------------
 
 export interface DialogData {
   id: number;
@@ -28,12 +21,16 @@ export interface DialogData {
   source: string;
 }
 
+
+// ----------------- Button -----------------
+
 @Component({
-  selector: 'recipe-form-component',
-  templateUrl: 'recipe-form.component.html',
+  selector: 'app-add-recipe-button',
+  templateUrl: 'add-recipe-button.component.html',
+  styleUrls: ['add-recipe-button.component.scss']
 })
 
-export class RecipeFormComponent {
+export class AddRecipeButtonComponent{
   id!: number;
   date!: string;
   name!: string;
@@ -48,7 +45,7 @@ export class RecipeFormComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(RecipeFormComponentDialog, {
+    const dialogRef = this.dialog.open(AddRecipeDialog, {
       data: {
         id: this.id,
         date: this.date,
@@ -64,20 +61,20 @@ export class RecipeFormComponent {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-      console.log(`Dialog result: ${result.notes}`);
+      console.log(`Add Recipe Form closed -- result: ${result}`);
     });
   }
 }
 
-
+// ----------------- [Populate] Form -----------------
 @Component({
-  selector: 'recipe-form-dialog',
-  templateUrl: 'recipe-form-dialog.component.html',
+  selector: 'add-recipe-form',
+  templateUrl: 'add-recipe-form.component.html',
 })
-export class RecipeFormComponentDialog {
+
+export class AddRecipeDialog {
   constructor(
-    public dialogRef: MatDialogRef<RecipeFormComponentDialog>,
+    public dialogRef: MatDialogRef<AddRecipeDialog>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) {}
 

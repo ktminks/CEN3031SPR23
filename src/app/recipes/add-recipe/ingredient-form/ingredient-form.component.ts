@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Ingredient} from '../../recipes/recipe.model';
+import { Ingredient} from '../../recipe.model';
 @Component({
   selector: 'app-ingredient-form',
   templateUrl: './ingredient-form.component.html',
