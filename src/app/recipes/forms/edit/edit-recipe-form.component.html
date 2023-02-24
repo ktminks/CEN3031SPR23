@@ -1,8 +1,3 @@
-<style>
-    h1 {text-align: center;}
-    p {text-align: center;}
-    div {text-align: center;}
- </style>
 <h1 mat-dialog-title>Recipe</h1>
 <div mat-dialog-content>
   <mat-form-field appearance="fill">
@@ -14,17 +9,17 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Title</mat-label>
-    <input matInput [(ngModel)]="data.name" />
+    <input matInput [(ngModel)]="data.name" required />
   </mat-form-field>
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Ingredients</mat-label>
-    <textarea matInput [(ngModel)]="data.ingredients"></textarea>
+    <textarea matInput [(ngModel)]="data.ingredients" required ></textarea>
   </mat-form-field>
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Instructions</mat-label>
-    <textarea matInput [(ngModel)]="data.instructions"></textarea>
+    <textarea matInput [(ngModel)]="data.instructions" required ></textarea>
   </mat-form-field>
   <br>
   <mat-form-field appearance="fill">

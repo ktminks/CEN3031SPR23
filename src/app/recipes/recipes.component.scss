@@ -1,0 +1,28 @@
+
+#recipe-display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+#controls button {
+  margin: 1vw;
+  box-shadow: none;
+}
+
+#recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

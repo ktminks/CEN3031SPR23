@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { Ingredient} from '../../recipes/recipe.model';
+import { Ingredient} from '../../recipe.model';
 @Component({
   selector: 'app-ingredient-form',
   templateUrl: './ingredient-form.component.html',
   styleUrls: ['./ingredient-form.component.scss']
 })
 export class IngredientFormComponent {
-  
-
-  model = new Ingredient('',3, '');
-
+  name!: string;
+  amount!: number;
+  amountType!: string;
+  ingredient!: Ingredient;
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newIngredient() {
-    this.model = new Ingredient('',2,'');
+    this.ingredient = new Ingredient(this.name, this.amount, this.amountType);
   }
 }
