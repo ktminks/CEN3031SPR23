@@ -13,7 +13,7 @@ import { Recipe, Ingredient } from '../../recipe.model';
 @Component({
   selector: 'app-add-recipe-button',
   templateUrl: 'add-recipe-button.component.html',
-  styleUrls: ['add-recipe-button.component.scss']
+  styleUrls: ['../form.component.scss']
 })
 
 export class AddRecipeButtonComponent{
@@ -75,7 +75,7 @@ export class AddRecipeButtonComponent{
 @Component({
   selector: 'add-recipe-form',
   templateUrl: 'add-recipe-form.component.html',
-  styleUrls: ['add-recipe-form.component.scss']
+  styleUrls: ['../form.component.scss']
 })
 
 export class AddRecipeDialog {
