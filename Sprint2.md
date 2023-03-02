@@ -18,7 +18,15 @@ In Progress:
 
 ### Backend
 
-TBD
+Completed:
+
+- Create basic API
+- Use temporary URL to store data
+
+In Progress:
+
+- Add GET and DELETE Methods to API
+- Store sent data to cloud database
 
 ## Testing Completed
 
@@ -43,7 +51,10 @@ Cypress Tests:
 
 ### Backend Tests
 
-TBD
+- HTTP_Send.py: Sends data to API
+  - should print the status code of the HTTP method
+- HTTP_Receive.py: API the data is sent too
+  - should print data in terminal and in JSON format
 
 ## API Documentation
 
