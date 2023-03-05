@@ -7,7 +7,6 @@ url = "http://localhost:4200"
 
 # Test Case Data
 data = {
-
     "Email": "swe@ufl.edu",
     "Name": "Chocolate Chip Cookies",
     "Ingredients": ["1 Cup of Salted Butter", "1 Cup of White (Granulated) Sugar", "1 Cup of Light Brown Sugar", "2 tsps of Pure Vanilla Extract", "2 Large Eggs", "3 Cups of All-Purpose Flour", "1 tsp of Baking Soda", "1/2 tsp of Baking Powder", "1 tsp of Sea Salt", "2 Cups of Chocolate Chips"],
