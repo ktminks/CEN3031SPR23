@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 # The API endpoint
-url = "http://localhost:27017"
+url = "http://localhost:4200"
 
 # Test Case Data
 data = {
@@ -21,8 +21,16 @@ data = {
 
 }
 
-# A POST request to the API
+# A POST request to the API and its status code
 post_response = requests.post(url, json = data)
-
-# Print the response code
 print(post_response.status_code)
+
+# A GET request to the API, its status code, and its result
+get_response = requests.get(url, params = data['Name'])
+print(get_response.status_code)
+for x in get_response:
+    print(x, "\n")
+
+# A DELETE request to the API and its status code
+put_response = requests.delete(url, params = data['Name'])
+print(get_response.status_code)
