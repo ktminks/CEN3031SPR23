@@ -18,7 +18,7 @@ table = database["Recipe Book"]
 def getall_recipes(name):
 
     # Find ever recipe currently in the database and store it as an array
-    recipes_array = table.find({}).toArray()
+    recipes_array = list(table.find({}))
     return recipes_array
 
 # POST (Create) Method
