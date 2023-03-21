@@ -2,12 +2,36 @@
   {
     "name": "Spaghetti Bolognese",
     "ingredients": [
-      "spaghetti, 400, grams",
-      "ground beef, 500, grams",
-      "tomato sauce, 400, grams",
-      "garlic, 3, cloves",
-      "onion, 1, medium",
-      "olive oil, 2, tablespoons"
+      {
+        "name": "spaghetti",
+        "amount": 400,
+        "amountType": "grams"
+      },
+      {
+        "name": "ground beef",
+        "amount": 500,
+        "amountType": "grams"
+      },
+      {
+        "name": "tomato sauce",
+        "amount": 400,
+        "amountType": "grams"
+      },
+      {
+        "name": "garlic",
+        "amount": 3,
+        "amountType": "cloves"
+      },
+      {
+        "name": "onion",
+        "amount": 1,
+        "amountType": "medium"
+      },
+      {
+        "name": "olive oil",
+        "amount": 2,
+        "amountType": "tablespoons"
+      }
     ],
     "instructions": [
       "Cook spaghetti according to package instructions.",
@@ -28,11 +52,11 @@
   {
     "name": "Spaghetti Carbonara",
     "ingredients": [
-      "Spaghetti, 1, pound",
-      "Bacon, 8, oz",
-      "Eggs, 4, large",
-      "Parmesan cheese, 1, cup",
-      "Garlic, 2, cloves"
+      { "name": "Spaghetti", "amount": 1, "amountType": "pound" },
+      { "name": "Bacon", "amount": 8, "amountType": "oz" },
+      { "name": "Eggs", "amount": 4, "amountType": "large" },
+      { "name": "Parmesan cheese", "amount": 1, "amountType": "cup" },
+      { "name": "Garlic", "amount": 2, "amountType": "cloves" }
     ],
     "instructions": [
       "Cook spaghetti according to package instructions.",
@@ -55,14 +79,14 @@
   {
     "name": "Chicken Tikka Masala",
     "ingredients": [
-      "Chicken breast, 2, lb",
-      "Yogurt, 1, cup",
-      "Garam masala, 2, tablespoon",
-      "Cumin powder, 1, teaspoon",
-      "Coriander powder, 1, teaspoon",
-      "Chili powder, 1, teaspoon",
-      "Tomato puree, 1, can",
-      "Cream, 1, cup"
+      { "name": "Chicken breast", "amount": 2, "amountType": "lb" },
+      { "name": "Yogurt", "amount": 1, "amountType": "cup" },
+      { "name": "Garam masala", "amount": 2, "amountType": "tablespoon" },
+      { "name": "Cumin powder", "amount": 1, "amountType": "teaspoon" },
+      { "name": "Coriander powder", "amount": 1, "amountType": "teaspoon" },
+      { "name": "Chili powder", "amount": 1, "amountType": "teaspoon" },
+      { "name": "Tomato puree", "amount": 1, "amountType": "can" },
+      { "name": "Cream", "amount": 1, "amountType": "cup" }
     ],
     "instructions": [
       "Cut chicken breast into 1-inch cubes.",
@@ -87,15 +111,15 @@
   {
     "name": "Chocolate Chip Cookies",
     "ingredients": [
-      "Butter, 1, cup",
-      "Brown sugar, 0.5, cup",
-      "Granulated sugar, 0.5, cup",
-      "Egg, 1, ",
-      "Vanilla extract, 1, teaspoon",
-      "Flour, 2, cup",
-      "Baking soda, 1, teaspoon",
-      "Salt, 0.5, teaspoon",
-      "Chocolate chips, 2, cup"
+      { "name": "Butter", "amount": 1, "amountType": "cup" },
+      { "name": "Brown sugar", "amount": 0.5, "amountType": "cup" },
+      { "name": "Granulated sugar", "amount": 0.5, "amountType": "cup" },
+      { "name": "Egg", "amount": 1, "amountType": "" },
+      { "name": "Vanilla extract", "amount": 1, "amountType": "teaspoon" },
+      { "name": "Flour", "amount": 2, "amountType": "cup" },
+      { "name": "Baking soda", "amount": 1, "amountType": "teaspoon" },
+      { "name": "Salt", "amount": 0.5, "amountType": "teaspoon" },
+      { "name": "Chocolate chips", "amount": 2, "amountType": "cup" }
     ],
     "instructions": [
       "Preheat oven to 350 degrees F.",
@@ -118,9 +142,21 @@
   {
     "name": "Grilled Cheese Sandwich",
     "ingredients": [
-      "bread, 2, slices",
-      "cheese, 2, slices",
-      "butter, 1, tablespoon"
+      {
+        "name": "bread",
+        "amount": 2,
+        "amountType": "slices"
+      },
+      {
+        "name": "cheese",
+        "amount": 2,
+        "amountType": "slices"
+      },
+      {
+        "name": "butter",
+        "amount": 1,
+        "amountType": "tablespoon"
+      }
     ],
     "instructions": [
       "Butter one side of each slice of bread.",
@@ -140,14 +176,46 @@
   {
     "name": "Pancakes",
     "ingredients": [
-      "flour, 1.5, cups",
-      "sugar, 2, teaspoons",
-      "baking powder, 1, teaspoon",
-      "salt, 0.25, teaspoon",
-      "milk, 1, cup",
-      "eggs, 2, ",
-      "melted butter, 2, tablespoons",
-      "vanilla extract, 1, teaspoon"
+      {
+        "name": "flour",
+        "amount": 1.5,
+        "amountType": "cups"
+      },
+      {
+        "name": "sugar",
+        "amount": 2,
+        "amountType": "teaspoons"
+      },
+      {
+        "name": "baking powder",
+        "amount": 1,
+        "amountType": "teaspoon"
+      },
+      {
+        "name": "salt",
+        "amount": 0.25,
+        "amountType": "teaspoon"
+      },
+      {
+        "name": "milk",
+        "amount": 1,
+        "amountType": "cup"
+      },
+      {
+        "name": "eggs",
+        "amount": 2,
+        "amountType": ""
+      },
+      {
+        "name": "melted butter",
+        "amount": 2,
+        "amountType": "tablespoons"
+      },
+      {
+        "name": "vanilla extract",
+        "amount": 1,
+        "amountType": "teaspoon"
+      }
     ],
     "instructions": [
       "In a large bowl, mix together flour, sugar, baking powder, and salt.",
@@ -169,13 +237,41 @@
   {
     "name": "Lemon Chicken",
     "ingredients": [
-      "lemon juice, 0.25, cup",
-      "lemon zest, 1, tablespoon",
-      "garlic, 1, teaspoon",
-      "olive oil, 2, tablespoons",
-      "salt, 0.5, teaspoon",
-      "pepper, 0.25, teaspoon",
-      "chicken, 2, breasts"
+      {
+        "name": "lemon juice",
+        "amount": 0.25,
+        "amountType": "cup"
+      },
+      {
+        "name": "lemon zest",
+        "amount": 1,
+        "amountType": "tablespoon"
+      },
+      {
+        "name": "garlic",
+        "amount": 1,
+        "amountType": "teaspoon"
+      },
+      {
+        "name": "olive oil",
+        "amount": 2,
+        "amountType": "tablespoons"
+      },
+      {
+        "name": "salt",
+        "amount": 0.5,
+        "amountType": "teaspoon"
+      },
+      {
+        "name": "pepper",
+        "amount": 0.25,
+        "amountType": "teaspoon"
+      },
+      {
+        "name": "chicken breasts",
+        "amount": 2,
+        "amountType": ""
+      }
     ],
     "instructions": [
       "In a large bowl, whisk together lemon juice, lemon zest, garlic, olive oil, salt, and pepper.",
