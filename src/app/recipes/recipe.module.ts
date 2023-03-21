@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from '../services/api.service';
 
 import { RecipesComponent } from './recipes.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
@@ -38,6 +40,9 @@ import { MaterialModule } from 'src/material.module';
     FormsModule, 
     ReactiveFormsModule,
     MaterialModule,
+  ],
+  providers: [
+    ApiService,
   ],
 })
 export class RecipeModule {}
