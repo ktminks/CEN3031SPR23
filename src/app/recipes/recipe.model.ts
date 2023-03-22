@@ -1,8 +1,8 @@
 /* schema (db):
  recipe {
     name: string,
-    ingredients: [string],
-    instructions: [string],
+    ingredients: string[],
+    instructions: string[],
     image: string,
     tags: string,
     rating: number,
