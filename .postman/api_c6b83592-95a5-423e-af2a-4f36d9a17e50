@@ -9,7 +9,7 @@ id = c6b83592-95a5-423e-af2a-4f36d9a17e50
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"1766794-3a518786-c8e9-4911-8ded-91f908545337","path":"RecipeBook API.json","metaData":{}}
+files[] = {"id":"1766794-ecc69b38-ffe6-4039-9722-4f1b7f14c162","path":"RecipeBook v1.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Schema\",\"folderStrategy\":\"Paths\",\"includeAuthInfoInExample\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Schema\",\"exampleParametersResolution\":\"Schema\"}"}}
 
 [config.relations.collections.metaData]
 

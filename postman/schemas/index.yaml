@@ -3,9 +3,9 @@ info:
   title: Recipes CRUD API
   version: 1.0.0
 servers:
-  - url: http://localhost:4201/recipes
+  - url: http://localhost:4201
 paths:
-  /:
+  /recipes:
     get:
       summary: Get all recipes
       responses:
@@ -17,7 +17,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Recipe'
-  /{id}:
+  /recipes/{id}:
     get:
       summary: Get a single recipe by ID
       parameters:
@@ -43,7 +43,7 @@ paths:
                   error:
                     type: string
                     example: Recipe not found
-  /add:
+  /recipes/add:
     post:
       summary: Add a new recipe
       requestBody:
@@ -63,7 +63,7 @@ paths:
                   _id:
                     type: string
                     example: 6074fb9d8eadce169efafdfb
-  /edit/{id}:
+  /recipes/edit/{id}:
     put:
       summary: Edit a recipe by ID
       parameters:
@@ -99,7 +99,7 @@ paths:
                   error:
                     type: string
                     example: Recipe not found or not modified
-  /delete/{id}:
+  /recipes/delete/{id}:
     delete:
       summary: Delete a recipe by ID
       parameters:
