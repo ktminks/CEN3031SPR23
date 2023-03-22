@@ -1,8 +1,11 @@
 from bson.objectid import ObjectId
 from utils.DB_Connect import connect_to_db
 
-db = connect_to_db()
-collection = db['recipes_collection']
+def setup_db(app):
+    mongo = connect_to_db(app)
+    db = mongo.db
+    global collection
+    collection = db['recipes_collection']
 
 def create_recipe(recipe):
     result = collection.insert_one(recipe)
