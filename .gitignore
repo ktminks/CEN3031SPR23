@@ -12,11 +12,6 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-
 # IDEs and editors
 .idea/
 .project
@@ -46,3 +41,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Secrets
+.env
