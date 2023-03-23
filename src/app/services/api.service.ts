@@ -7,8 +7,8 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'http://localhost:4200';
-  public apiUrl = this.baseUrl + '/api/recipes';
+  private baseUrl = 'http://localhost:4201';
+  public apiUrl = this.baseUrl + '/recipes';
   private fallbackDataPath = 'assets/recipes.json';
 
   constructor(private http: HttpClient) {}
