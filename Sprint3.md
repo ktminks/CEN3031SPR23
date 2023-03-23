@@ -73,7 +73,6 @@ Both versions start the server/API on port 4021.
 - Fix 'edit' functionality (currently non-functional boilerplate code)
   - Routing is correct, error is in edit function in DB_Handlers.py
   - After fix, add working example to documentation (Postman)
-- Update README with new dependencies & install / run instructions
 
 ## Front-end
 
