@@ -3,31 +3,31 @@ from flask_restful import Resource, Api
 from utils.DB_Handlers import *
 
 def setup_routes(app):
-    api = Api(app, "/api")
-    api.add_resource(GetRecipe, '/recipes', '/recipes/<id>')
-    api.add_resource(CreateRecipe, '/recipes/create')
-    api.add_resource(UpdateRecipe, '/recipes/update/<id>')
-    api.add_resource(DeleteRecipe, '/recipes/delete/<id>')
+    api = Api(app, "/recipes")
+    api.add_resource(GetRecipe, '/', '/<id>')
+    api.add_resource(AddRecipe, '/add')
+    api.add_resource(EditRecipe, '/edit/<id>')
+    api.add_resource(DeleteRecipe, '/delete/<id>')
     setup_db(app)
 
 class GetRecipe(Resource):
     def get(self, id=None):
         if id is None:
-            response = read_all_recipes()
+            response = get_all_recipes()
         else:
-            response = read_recipe(id)
+            response = get_recipe(id)
         return jsonify(response)
     
-class CreateRecipe(Resource):
+class AddRecipe(Resource):
     def post(self):
         data = request.get_json()
-        response = create_recipe(data)
+        response = add_recipe(data)
         return jsonify(response)
     
-class UpdateRecipe(Resource):
+class EditRecipe(Resource):
     def put(self, id):
         data = request.get_json()
-        response = update_recipe(id, data)
+        response = edit_recipe(id, data)
         return jsonify(response)
     
 class DeleteRecipe(Resource):
