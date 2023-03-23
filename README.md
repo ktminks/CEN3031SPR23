@@ -55,7 +55,7 @@ pipenv is the Python equivalent of npm. In larger projects like these, a package
 
 > - Check if pipenv is installed: `pipenv --version`
 > - Install pipenv: `pip install pipenv`
->   - Once the install is finished, close and reopen the command line. 
+>   - Once the install is finished, close and reopen the command line.
 >   - If you get some variation of the error `pipenv: command not recognized`, you will need to add pipenv's install location to your PATH variable: `where pipenv`
 >     - Copy the output of this command and paste it into your PATH variable.
 > - Install back-end dependencies: `pipenv install`
