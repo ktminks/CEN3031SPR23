@@ -1,12 +1,8 @@
-/* schema:
+/* schema (db):
  recipe {
     name: string,
-    ingredients: [{
-        name: string,
-        amount: number,
-        amountType: string
-    }],
-    instructions: [string],
+    ingredients: string[],
+    instructions: string[],
     image: string,
     tags: string,
     rating: number,
@@ -14,6 +10,12 @@
     source: string,
     date: date,
     id: number
+}
+
+{
+    name: string,
+    amount: number,
+    amountType: string
 }
 */
 export interface Ingredient {
@@ -33,29 +35,5 @@ export interface Recipe {
   notes: string;
   source: string;
   date: string;
-  id: number;
-
-  
-}
-
-export class Recipe{
-  constructor(
-    public name: string,
-    public ingredients: Ingredient[],
-    public instructions: string[],
-    public image: string,
-    public tags: string,
-    public rating: number,
-    public notes: string,
-    public source: string,
-    public date: string,
-    public id: number
-  ){}
-}
-export class Ingredient{
-  constructor(
-    public name: string,
-    public amount: number,
-    public amountType: string
-  ){}
+  id: number;  
 }

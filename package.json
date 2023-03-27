@@ -2,9 +2,10 @@
   "name": "recipe-book",
   "version": "0.0.0",
   "scripts": {
-    "install-dependencies": "npm install && go get ./src/server/...",
+    "install-dependencies": "npm install && pipenv install",
     "client": "ng serve",
-    "server": "go run ./src/server/main.go",
+    "server": "python src/server/main.py",
+    "server-dev": "flask --app src/server/main.py run --port=4201",
     "ng": "ng",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

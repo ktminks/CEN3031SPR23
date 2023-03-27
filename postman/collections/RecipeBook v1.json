@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "ecc69b38-ffe6-4039-9722-4f1b7f14c162",
+		"name": "RecipeBook v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "1766794-ecc69b38-ffe6-4039-9722-4f1b7f14c162"
+	},
+	"item": [
+		{
+			"name": "recipes",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get a single recipe by ID",
+							"id": "b1a0ce4c-fb06-4699-bd2e-63308ce7eb59",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/recipes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"recipes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ed6392e0-e958-4421-8011-561300bd2227",
+									"name": "Recipe returned",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4201/recipes/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4201",
+											"path": [
+												"recipes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"instructions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<number>\",\n  \"_id\": \"<string>\",\n  \"image\": \"<string>\",\n  \"tags\": \"<string>\",\n  \"rating\": \"<number>\",\n  \"notes\": \"<string>\",\n  \"source\": \"<string>\",\n  \"date\": \"<string>\"\n}"
+								},
+								{
+									"id": "be4d190d-a506-4e4c-8318-238fc85f6824",
+									"name": "Recipe not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/recipes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"recipes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"error\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "64bfe409-4d60-48a9-8e20-34635408582a"
+				},
+				{
+					"name": "edit",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Edit a recipe by ID",
+									"id": "74c84c73-7a2c-4a03-8cd4-0badf398f9dc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"instructions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<number>\",\n  \"_id\": \"<string>\",\n  \"image\": \"<string>\",\n  \"tags\": \"<string>\",\n  \"rating\": \"<number>\",\n  \"notes\": \"<string>\",\n  \"source\": \"<string>\",\n  \"date\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/recipes/edit/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"recipes",
+												"edit",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "64a1e868-3aaa-4563-a34b-2c6c2cc0af17",
+											"name": "Recipe edited",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"instructions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<number>\",\n  \"_id\": \"<string>\",\n  \"image\": \"<string>\",\n  \"tags\": \"<string>\",\n  \"rating\": \"<number>\",\n  \"notes\": \"<string>\",\n  \"source\": \"<string>\",\n  \"date\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:4201/recipes/edit/:id",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "4201",
+													"path": [
+														"recipes",
+														"edit",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"result\": \"<string>\"\n}"
+										},
+										{
+											"id": "daad136f-110b-40ce-880a-6c4bef3e6c56",
+											"name": "Recipe not found or not modified",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"instructions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<number>\",\n  \"_id\": \"<string>\",\n  \"image\": \"<string>\",\n  \"tags\": \"<string>\",\n  \"rating\": \"<number>\",\n  \"notes\": \"<string>\",\n  \"source\": \"<string>\",\n  \"date\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/recipes/edit/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"recipes",
+														"edit",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"error\": \"<string>\"\n}"
+										}
+									]
+								}
+							],
+							"id": "75ddbdce-c076-4f74-8784-5bfa43662e1a"
+						}
+					],
+					"id": "e4251357-ce4b-4eed-a03f-2398464acb89"
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Delete a recipe by ID",
+									"id": "16c2318e-9250-48a6-aafe-9ca2dfc544c2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/recipes/delete/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"recipes",
+												"delete",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "f8a4afbb-1637-475a-be54-04bff49a5db0",
+											"name": "Recipe deleted",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:4201/recipes/delete/:id",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "4201",
+													"path": [
+														"recipes",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"result\": \"<string>\"\n}"
+										},
+										{
+											"id": "516462b2-c240-4e77-930e-24725a2c03b0",
+											"name": "Recipe not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/recipes/delete/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"recipes",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"error\": \"<string>\"\n}"
+										}
+									]
+								}
+							],
+							"id": "859826fd-a3f9-4c50-9dca-bd0a00159023"
+						}
+					],
+					"id": "3123cd99-8310-4570-8e47-3bddb9af8b63"
+				},
+				{
+					"name": "add",
+					"item": [
+						{
+							"name": "Add a new recipe",
+							"id": "b22dae02-26d3-44fd-952d-98d3d86c01a0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"instructions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<number>\",\n  \"_id\": \"<string>\",\n  \"image\": \"<string>\",\n  \"tags\": \"<string>\",\n  \"rating\": \"<number>\",\n  \"notes\": \"<string>\",\n  \"source\": \"<string>\",\n  \"date\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/recipes/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"recipes",
+										"add"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8219ce52-df56-4461-9c25-761f643b012d",
+									"name": "Recipe added successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"instructions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<number>\",\n  \"_id\": \"<string>\",\n  \"image\": \"<string>\",\n  \"tags\": \"<string>\",\n  \"rating\": \"<number>\",\n  \"notes\": \"<string>\",\n  \"source\": \"<string>\",\n  \"date\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/recipes/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"recipes",
+												"add"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_id\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "d1bfdb87-b40d-45e8-90fa-501972dfc009"
+				},
+				{
+					"name": "Get all recipes",
+					"id": "46a3f6bc-9b4d-4367-ae74-311abcc97fe9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/recipes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7d23a1b3-91c4-4ef5-b072-40a42cd55981",
+							"name": "All recipes returned",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/recipes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"recipes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"name\": \"<string>\",\n    \"ingredients\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"instructions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<number>\",\n    \"_id\": \"<string>\",\n    \"image\": \"<string>\",\n    \"tags\": \"<string>\",\n    \"rating\": \"<number>\",\n    \"notes\": \"<string>\",\n    \"source\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"ingredients\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"instructions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<number>\",\n    \"_id\": \"<string>\",\n    \"image\": \"<string>\",\n    \"tags\": \"<string>\",\n    \"rating\": \"<number>\",\n    \"notes\": \"<string>\",\n    \"source\": \"<string>\",\n    \"date\": \"<string>\"\n  }\n]"
+						}
+					]
+				}
+			],
+			"id": "0f277fe1-463b-4087-8858-1652da47646e"
+		}
+	],
+	"variable": [
+		{
+			"id": "c6c8cd9c-a0cb-46e2-8c50-1a9c9f6d3e0d",
+			"key": "baseUrl",
+			"value": "http://localhost:4201"
+		}
+	]
+}
