@@ -20,3 +20,6 @@ export class RecipeCardComponent {
     id: 0
   };
 }
+
+
+
