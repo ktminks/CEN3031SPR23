@@ -13,8 +13,4 @@ export class IngredientFormComponent {
   submitted = false;
 
   onSubmit() { this.submitted = true; }
-
-  newIngredient() {
-    this.ingredient = new Ingredient(this.name, this.amount, this.amountType);
-  }
 }

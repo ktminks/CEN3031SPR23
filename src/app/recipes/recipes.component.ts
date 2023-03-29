@@ -1,23 +1,26 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Recipe } from './recipe.model';
+import {RecipeDataService} from '../services/recipe-data.service';
 
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.scss'],
 })
-export class RecipesComponent {
+export class RecipesComponent implements OnInit, OnDestroy {
   recipes: Recipe[] = [];
+  private recipeSubscription: Subscription = new Subscription;
 
-  constructor(private http: HttpClient) {}
+  constructor(private recipeDataService: RecipeDataService) {}
 
-  ngOnInit() {
-    // serve recipes from assets [for testing]
-    this.http.get<Recipe[]>('assets/recipes.json').subscribe((recipes) => {
-      this.recipes = recipes;
+  ngOnInit(): void {
+    this.recipeSubscription = this.recipeDataService.recipes.subscribe((data: Recipe[]) => {
+      this.recipes = data;
     });
+  }
 
-    // to serve from api, use path '/api/recipes'
+  ngOnDestroy(): void {
+    this.recipeSubscription.unsubscribe();
   }
 }
