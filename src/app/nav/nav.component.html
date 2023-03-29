@@ -1,12 +1,34 @@
-<mat-toolbar>
-    <mat-toolbar-row id="navbar">
-        <span>
-            <h1 class="title">Recipe Book</h1>
-        </span>
-        <span id="nav-buttons">
-            <button mat-button routerLink="/recipes" routerLinkActive="active" ariaCurrentWhenActive="page">Recipes</button>
-            <button mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Pantry</button>
-            <button mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Shopping List</button>
-        </span>
-    </mat-toolbar-row>
+<mat-toolbar color = "primary">
+    <p>
+        <mat-toolbar-row id="navbar" >
+            <span>
+                <h1 class="title">Recipe Book</h1>
+            </span>
+            <span id="nav-buttons">
+                <button mat-raised-button color="lightblue" routerLink="/recipes" routerLinkActive="active" ariaCurrentWhenActive="page">Recipes</button>
+                <button mat-raised-button color="lightblue" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Pantry</button>
+                <button mat-raised-button color="lightblue" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Shopping List</button>
+                <button mat-raised-button color="lightblue" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Login</button>
+            </span>
+        </mat-toolbar-row>
+    </p>
+
 </mat-toolbar>
+
+<!-- The CSS grid that makes up the entirety of the hero image/banner image area -->
+<section class="top-banner-section">
+    <!-- The CSS grid area that displays the image (layer 1) -->
+    <div class="banner-image-div">
+      <img class="banner-image" src="https://thumbs.dreamstime.com/b/assorted-indian-recipes-food-various-spices-rice-wooden-table-92742528.jpg" alt="Banner Image" />
+    </div>
+    <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
+    <div class="banner-overlay-div"></div>
+    <!-- The CSS grid area that displays the content (layer 3) -->
+    <div class="banner-text-div">
+      <span class="banner-text">
+        <p class="banner-h1-text">Welcome To Our Website!</p>
+        <p class="banner-body-text">An online place to save, edit, and share your favorite recipes</p>
+        <p class="banner-btn"><a class="banner-btn-item" href="https://www.cambermast.com">Create Account &#8594;</a></p>
+      </span>
+    </div>
+  </section>

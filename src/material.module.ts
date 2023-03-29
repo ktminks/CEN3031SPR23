@@ -96,7 +96,7 @@ import {DialogModule} from '@angular/cdk/dialog';
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    DialogModule,
+    DialogModule
   ]
 })
 export class MaterialModule {}

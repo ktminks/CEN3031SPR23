@@ -45,3 +45,17 @@ button {
   justify-content: space-evenly;
   width: 50%;
 }
+
+.recipe-card mat-card-header{
+  background-color:lightblue !important;
+  width:370px !important;
+  height:60px !important;
+}
+
+.mat-card{
+  padding:0 !important;
+}
+
+.mat-card-content{
+  padding:5px !important;
+}
