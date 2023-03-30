@@ -11,6 +11,8 @@ connection = pymongo.MongoClient("mongodb+srv://" + username + ":" + password + 
 database = connection["Project"]
 table = database["Recipe Book"]
 
+
+
 # GET ALL (Read) Method
 @route('/', method = 'GET')
 def getall_recipes(name):
@@ -60,6 +62,12 @@ def delete_recipe(name):
 run(host = "localhost", port = 4200)
 
 import unittest
+import requests
+import json
+from datetime import datetime
+# The API endpoint
+url = "http://localhost:4200"
+
 class TestDB(unittest.TestCase):
     def test_getAll(self):
         #get all of the recipes in the database
