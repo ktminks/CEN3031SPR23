@@ -15,6 +15,7 @@ import { IngredientFormComponent } from './forms/ingredients/ingredient-form.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/material.module';
 import { EditRecipeComponent } from './recipe-card/edit-recipe/edit-recipe.component';
+import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-recipe/delete-recipe.component';
 
 
 
@@ -28,6 +29,8 @@ import { EditRecipeComponent } from './recipe-card/edit-recipe/edit-recipe.compo
     EditRecipeDialog,
     IngredientFormComponent,
     EditRecipeComponent,
+    DeleteRecipeComponent,
+    DeleteRecipeDialog
   ],
   imports: [
     CommonModule,

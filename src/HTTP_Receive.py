@@ -11,12 +11,23 @@ connection = pymongo.MongoClient("mongodb+srv://" + username + ":" + password + 
 database = connection["Project"]
 table = database["Recipe Book"]
 
-# GET (Read) Method
+
+
+# GET ALL (Read) Method
 @route('/', method = 'GET')
 def getall_recipes(name):
     # Find ever recipe currently in the database and store it as an array
     recipes_array = list(table.find({}))
     return recipes_array
+
+# GET (Read) Method
+@route('/<recipe_name>', method = 'GET')
+def get_recipe(recipe_name):
+    recipe = table.find_one({}, {'Name': recipe_name})
+    # Check if recipe is in the database or not
+    if not recipe:
+        abort(404, "No recipe with the name: %s" % recipe_name)
+    return recipe
 
 # POST (Create) Method
 @route('/', method = 'POST')
@@ -38,19 +49,25 @@ def add_recipe():
     except:
         abort(404, "Data not inserted into database")
 
-'''# Delete Method
+# Delete Method
 @route('/<name>', method = 'DELETE')
-def update_recipe(name):
+def delete_recipe(name):
     recipe = table.find_one({}, {'Name': name})
     # Check if recipe is in the database or not
     if not recipe:
         abort(404, "No recipe with the Name: %s" % name)
-    table.delete_one(recipe)'''
+    table.delete_one(recipe)
 
 # Run API on the localhost server at port 4200
 run(host = "localhost", port = 4200)
 
 import unittest
+import requests
+import json
+from datetime import datetime
+# The API endpoint
+url = "http://localhost:4200"
+
 class TestDB(unittest.TestCase):
     def test_getAll(self):
         #get all of the recipes in the database
@@ -59,6 +76,27 @@ class TestDB(unittest.TestCase):
         #for each recipe, increase count by one
         for recipe in temp:
             count = count + 1
+        funct_test= getall_recipes("")
+        self.assertEqual(count, len(funct_test))
+    def test_get(self):
+        #get the Chocolate Chip Cookies recipe in the database
+        temp = table.find_one({}, {'Name': 'Chocolate Chip Cookies'})
+        funct_test = get_recipe('Chocolate Chip Cookies')
+        self.assertEqual(temp, funct_test)
+
+unittest.main(argv = [''], verbosity = 2, exit = False)
+
+#============== RUN DELETE UNIT TEST LAST =====================#
+import unittest
+class TestDB(unittest.TestCase):
+    def test_delete(self):
+        temp = table.find({})
+        count = 0
+        #for each recipe, increase count by one
+        for recipe in temp:
+            count = count + 1
+        delete_recipe('Chocolate Chip Cookies')
+        count -= 1
         funct_test= getall_recipes("")
         self.assertEqual(count, len(funct_test))
 
