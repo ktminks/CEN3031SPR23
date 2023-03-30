@@ -7,7 +7,7 @@ from datetime import datetime
 # Connect to MongoDB, define which database (Project), then the table (Recipe Book)
 username = ""
 password = ""
-connection = pymongo.MongoClient("mongodb+srv://LinetteVelez:Poppy@cluster0.lhrqxgd.mongodb.net/test")
+connection = pymongo.MongoClient("mongodb+srv://" + username + ":" + password + "@cluster0.lhrqxgd.mongodb.net/test")
 database = connection["Project"]
 table = database["Recipe Book"]
 
