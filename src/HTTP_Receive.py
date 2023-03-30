@@ -7,9 +7,11 @@ from datetime import datetime
 # Connect to MongoDB, define which database (Project), then the table (Recipe Book)
 username = ""
 password = ""
-connection = pymongo.MongoClient("mongodb+srv://" + username + ":" + password + "@cluster0.lhrqxgd.mongodb.net/test")
+connection = pymongo.MongoClient("mongodb+srv://LinetteVelez:Poppy@cluster0.lhrqxgd.mongodb.net/test")
 database = connection["Project"]
 table = database["Recipe Book"]
+
+
 
 # GET ALL (Read) Method
 @route('/', method = 'GET')
@@ -60,6 +62,12 @@ def delete_recipe(name):
 run(host = "localhost", port = 4200)
 
 import unittest
+import requests
+import json
+from datetime import datetime
+# The API endpoint
+url = "http://localhost:4200"
+
 class TestDB(unittest.TestCase):
     def test_getAll(self):
         #get all of the recipes in the database
@@ -75,6 +83,12 @@ class TestDB(unittest.TestCase):
         temp = table.find_one({}, {'Name': 'Chocolate Chip Cookies'})
         funct_test = get_recipe('Chocolate Chip Cookies')
         self.assertEqual(temp, funct_test)
+
+unittest.main(argv = [''], verbosity = 2, exit = False)
+
+#============== RUN DELETE UNIT TEST LAST =====================#
+import unittest
+class TestDB(unittest.TestCase):
     def test_delete(self):
         #get the Chocolate Chip Cookies recipe in the database
         delete_recipe('Chocolate Chip Cookies')
