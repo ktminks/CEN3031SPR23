@@ -90,9 +90,14 @@ unittest.main(argv = [''], verbosity = 2, exit = False)
 import unittest
 class TestDB(unittest.TestCase):
     def test_delete(self):
-        #get the Chocolate Chip Cookies recipe in the database
+        temp = table.find({})
+        count = 0
+        #for each recipe, increase count by one
+        for recipe in temp:
+            count = count + 1
         delete_recipe('Chocolate Chip Cookies')
-        temp = table.find_one({}, {'Name': 'Chocolate Chip Cookies'})
-        self.assertEqual(temp, None)
+        count -= 1
+        funct_test= getall_recipes("")
+        self.assertEqual(count, len(funct_test))
 
 unittest.main(argv = [''], verbosity = 2, exit = False)
