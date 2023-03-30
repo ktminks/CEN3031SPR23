@@ -13,7 +13,7 @@ table = database["Recipe Book"]
 
 # GET ALL (Read) Method
 @route('/', method = 'GET')
-def getall_recipes():
+def getall_recipes(name):
     # Find ever recipe currently in the database and store it as an array
     recipes_array = list(table.find({}))
     return recipes_array
@@ -70,13 +70,11 @@ class TestDB(unittest.TestCase):
             count = count + 1
         funct_test= getall_recipes("")
         self.assertEqual(count, len(funct_test))
-
     def test_get(self):
         #get the Chocolate Chip Cookies recipe in the database
         temp = table.find_one({}, {'Name': 'Chocolate Chip Cookies'})
         funct_test = get_recipe('Chocolate Chip Cookies')
         self.assertEqual(temp, funct_test)
-
     def test_delete(self):
         #get the Chocolate Chip Cookies recipe in the database
         delete_recipe('Chocolate Chip Cookies')
