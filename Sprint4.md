@@ -33,11 +33,11 @@
 
 ## Back-end: Recipe Book API Documentation
 
-### API v1.0
+### API v2.0
 
 - [API documentation](https://documenter.getpostman.com/view/1766794/2s93RMTuYD)
 
-### API v2.0
+### API v1.0
 
 Description: This CRUD API is the basic framework of the recipe book project. It will retreive HTTP requests sent from the frontend framework and handle data based on the request sent. Being a CRUD API, it will allow the creation, reading, updating, and deletion of any recipe the user wants.
 
