@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {Inject, OnInit } from '@angular/core';
-import { result } from 'cypress/types/lodash';
 
 @Component({
   selector: 'app-delete-recipe',
