@@ -1,3 +1,21 @@
+<!-- The CSS grid that makes up the entirety of the hero image/banner image area -->
+<section class="top-banner-section">
+  <!-- The CSS grid area that displays the image (layer 1) -->
+  <div class="banner-image-div">
+    <img class="banner-image" src="https://thumbs.dreamstime.com/b/assorted-indian-recipes-food-various-spices-rice-wooden-table-92742528.jpg" alt="Banner Image" />
+  </div>
+  <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
+  <div class="banner-overlay-div"></div>
+  <!-- The CSS grid area that displays the content (layer 3) -->
+  <div class="banner-text-div">
+    <span class="banner-text">
+      <p class="banner-h1-text">Welcome To Our Website!</p>
+      <p class="banner-body-text">An online place to save, edit, and share your favorite recipes</p>
+      <p><button mat-raised-button color="primary" routerLink="/login-signup" routerLinkActive="active" ariaCurrentWhenActive="page">Create Account</button></p>
+    </span>
+  </div>
+</section>
+
 <div id="recipe-display">
   <div id="controls">
     <button title="edit" type="button" mat-mini-fab color="primary" routerLink="#">
