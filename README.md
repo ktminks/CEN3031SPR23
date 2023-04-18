@@ -4,12 +4,7 @@
 
 ### DESCRIPTION
 
-Users can add their own recipes, edit, and delete them.  
-Users can log in using social media accounts (just Google at first).  
-Recipes will be stored as long as the user's account remains active and can be accessed at any time.  
-As stretch goals:  
-Users will be able to plan their meals for the week using their stored recipes.  
-Users can search for recipes to import via an external API as well.
+Users can manage a collection of recipes stored on the cloud. This is the MVP, currently capable of viewing, editing, adding, and deleting recipes.  
 
 ### GROUP 32
 
@@ -25,46 +20,33 @@ Users can search for recipes to import via an external API as well.
 - [Node.js](https://nodejs.org/en/download/)
 - [Angular CLI](https://cli.angular.io/)
 - [Python 3.11](https://www.python.org/downloads/)
+- [pipenv](https://pipenv.pypa.io/en/latest/)
 
-## Running the Full-Stack App
+## Running the App Locally
 
-1. Clone the repo
-2. Install dependencies: `npm run install-dependencies`
+After cloning the repo, navigate from a terminal to the root directory and run the following commands:  
+
+1. Install dependencies: `npm run install-dependencies`
+2. Build & run the back-end: `npm run server` (leave this running)
 3. Build & run the front-end: `npm run client` (leave this running)
-4. Build & run the back-end: `npm run server` (leave this running)
-5. Navigate to `http://localhost:4200/`
+4. Navigate to `http://localhost:4200/`
 
-## Running Client & Server Separately
+Alternatively, to install and run just the front-end, run: `npm install && npm run client`.  
+For just the back-end: `pipenv install && pipenv run flask run`
 
-### Build & Run Frontend
+*Note*: By default, the app is lacking database credentials, and so will use mock data stored in /src/assets. To connect the app to a database, you will need to create a file named `.env` in the root directory and save valid credentials for a MongoDB database here. The file should look like this:  
 
-> - Download & install dependencies: `npm install`
-> - Build & run: `ng serve`
-> - Run tests: `ng test`
+```dotenv
+    MONGODB_USERNAME=db-user  
+    MONGODB_PASSWORD=anafwe71q38249tybgerv789
+```
 
-### Backend
+### Development Options
 
-#### Backend: Build & Run Server
+During development, the server can instead be run in a manner better suited for hot-reloading on file changes. To do this, run `npm run server-dev` instead.
 
-> - Download & install dependencies: `pipenv install`
-> - Build & run: `flask run`
+#### Running Tests
 
-#### Backend: Dependencies & pipenv
-
-pipenv is the Python equivalent of npm. In larger projects like these, a package manager like this is used to manage all dependencies and environmental variables at once. These dependencies are listed in `Pipfile`, which is the Python equivalent of JavaScript's `package.json`.
-
-> - Check if pipenv is installed: `pipenv --version`
-> - Install pipenv: `pip install pipenv`
->   - Once the install is finished, close and reopen the command line.
->   - If you get some variation of the error `pipenv: command not recognized`, you will need to add pipenv's install location to your PATH variable: `where pipenv`
->     - Copy the output of this command and paste it into your PATH variable.
-> - Install back-end dependencies: `pipenv install`
->   - Once the dependencies are installed, you're done. This only needs to be done once (per machine).
-
-#### Back-end: Running the Server
-
-In addition to `npm run server`, there is now another option to run the back-end in development mode, which will automatically restart the server/API whenever a file is changed. To do this, run the following command instead:
-
-`npm run server-dev`
-
-Both versions start the server/API on port 4021.
+- Front-end unit tests: `npm run test-client`  
+- Cypress tests: `npm run test-e2e`  
+- Back-end unit tests: `npm run test-server`

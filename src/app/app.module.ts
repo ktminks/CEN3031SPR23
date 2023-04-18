@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { BannerComponent } from './banner/banner.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeModule } from './recipes/recipe.module';
@@ -24,6 +25,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
     AppRoutingModule, 
     BrowserAnimationsModule,
     NavComponent,
+    BannerComponent,
   ],
   bootstrap: [AppComponent],
 })

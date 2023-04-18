@@ -18,7 +18,7 @@ describe('RecipesComponent', () => {
     }).compileComponents();
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     fixture = TestBed.createComponent(RecipesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -28,11 +28,12 @@ describe('RecipesComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should initialize with recipes from RecipeDataService', () => {
+  it('should initialize with recipes from RecipeDataService', async () => {
     const recipeDataService = TestBed.inject(RecipeDataService);
     spyOn(recipeDataService, 'loadRecipes').and.callThrough();
 
-    component.ngOnInit();
+    fixture.detectChanges();
+    console.log('after fixture.detectChanges()');
     expect(recipeDataService.loadRecipes).toHaveBeenCalled();
   });
 });
