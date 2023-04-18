@@ -4,12 +4,14 @@
   "scripts": {
     "install-dependencies": "npm install && pipenv install",
     "client": "ng serve",
-    "server": "python src/server/main.py",
-    "server-dev": "flask --app src/server/main.py run --port=4201",
+    "server": "pipenv shell && python src/server/main.py",
+    "server-dev": "pipenv shell && flask run",
     "ng": "ng",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test-client": "ng test",
+    "test-server": "pytest",
+    "test-e2e": "cypress run",
     "lint": "ng lint"
   },
   "private": true,
