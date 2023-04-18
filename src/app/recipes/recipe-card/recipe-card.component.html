@@ -5,6 +5,14 @@
       <mat-card-subtitle>{{ recipe.rating }} / 5</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
+      <span class="buttons">
+        <button title="edit" type="button" mat-mini-fab color="primary" routerLink="#">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button title="delete" type="button" mat-mini-fab color="warn" routerLink="#">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </span>
       <h3>Ingredients:</h3>
       <ul>
         <li *ngFor="let ingredient of recipe.ingredients">
@@ -19,10 +27,4 @@
         </li>
       </ol>
     </mat-card-content>
-    <mat-card-actions class="card-buttons" aria-label="manage">
-      <app-edit-recipe></app-edit-recipe>
-      <app-delete-recipe-button></app-delete-recipe-button>
-      <button mat-raised-button>Like</button>
-      <button mat-raised-button>Share</button>
-    </mat-card-actions>
   </mat-card>

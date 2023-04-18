@@ -7,11 +7,9 @@
 }
 
 #controls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
+  position: fixed;
+  right: 1vw;
+  padding: 1vw;
 }
 #controls button {
   margin: 1vw;

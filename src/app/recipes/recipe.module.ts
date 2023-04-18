@@ -17,6 +17,7 @@ import { MaterialModule } from 'src/material.module';
 import { EditRecipeComponent } from './recipe-card/edit-recipe/edit-recipe.component';
 import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-recipe/delete-recipe.component';
 
+import { OpenFormButtonComponent, RecipeFormDialog } from './forms/recipe-form/recipe-form.component';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-r
     IngredientFormComponent,
     EditRecipeComponent,
     DeleteRecipeComponent,
-    DeleteRecipeDialog
+    DeleteRecipeDialog,
+    OpenFormButtonComponent,
+    RecipeFormDialog,
   ],
   imports: [
     CommonModule,

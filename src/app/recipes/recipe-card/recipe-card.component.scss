@@ -35,15 +35,15 @@
   margin: 10px 5px;
 }
 
-button {
-  margin: 0;
+.buttons {
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
 }
 
-.recipe-card .card-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 50%;
+button {
+  margin: 0.5vw;
+  box-shadow: none;
 }
 
 .recipe-card mat-card-header{

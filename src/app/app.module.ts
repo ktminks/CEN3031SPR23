@@ -11,7 +11,7 @@ import { RecipeModule } from './recipes/recipe.module';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
   ],
   imports: [
     BrowserModule, 
