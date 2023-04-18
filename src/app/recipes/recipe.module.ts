@@ -17,6 +17,7 @@ import { MaterialModule } from 'src/material.module';
 import { EditRecipeComponent } from './recipe-card/edit-recipe/edit-recipe.component';
 import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-recipe/delete-recipe.component';
 import { LikeRecipeComponent } from './recipe-card/like-recipe/like-recipe.component';
+import { ShareRecipeComponent } from './recipe-card/share-recipe/share-recipe.component';
 
 
 
@@ -32,7 +33,8 @@ import { LikeRecipeComponent } from './recipe-card/like-recipe/like-recipe.compo
     EditRecipeComponent,
     DeleteRecipeComponent,
     DeleteRecipeDialog,
-    LikeRecipeComponent
+    LikeRecipeComponent,
+    ShareRecipeComponent
   ],
   imports: [
     CommonModule,
