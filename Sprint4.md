@@ -31,8 +31,7 @@ Cypress Tests:
 Work (to) Completed:
 
 - KT: Fix 'edit' functionality (currently non-functional boilerplate code)
-  - Routing is correct, error is in edit function in DB_Handlers.py
-  - After fix, add working example to documentation (Postman)
+
 
 Unit Tests:
 

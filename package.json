@@ -4,8 +4,9 @@
   "scripts": {
     "install-dependencies": "npm install && pipenv install",
     "client": "ng serve",
-    "server": "pipenv shell && python src/server/main.py",
-    "server-dev": "pipenv shell && flask run",
+    "server": "python src/server/main.py",
+    "server-dev": "flask run",
+    "server-shell": "pipenv shell && python src/server/main.py",
     "ng": "ng",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
