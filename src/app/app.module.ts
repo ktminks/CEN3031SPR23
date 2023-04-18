@@ -7,10 +7,16 @@ import { NavComponent } from './nav/nav.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeModule } from './recipes/recipe.module';
+import { LoginSignupComponent } from './login-signup/login-signup.component';
+import { PantryComponent } from './pantry/pantry.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+    LoginSignupComponent,
+    PantryComponent,
+    ShoppingListComponent, 
   ],
   imports: [
     BrowserModule, 
