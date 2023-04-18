@@ -22,7 +22,7 @@
     <mat-card-actions class="card-buttons" aria-label="manage">
       <app-edit-recipe></app-edit-recipe>
       <app-delete-recipe-button></app-delete-recipe-button>
-      <button mat-raised-button>Like</button>
-      <button mat-raised-button>Share</button>
+      <button mat-raised-button (click)="onClickLike()">Like</button>
+      <button mat-raised-button (click)="onClickShare()">Share</button>
     </mat-card-actions>
   </mat-card>
