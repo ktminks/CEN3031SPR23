@@ -9,12 +9,11 @@ import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { AddRecipeButtonComponent,
          AddRecipeDialog } from './forms/add/add-recipe.component';
 import { EditRecipeButtonComponent,
-         EditRecipeDialog } from './forms/edit/edit-recipe.component';
+         EditRecipeDialog } from './recipe-card/edit/edit-recipe.component';
 import { IngredientFormComponent } from './forms/ingredients/ingredient-form.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/material.module';
-import { EditRecipeComponent } from './recipe-card/edit-recipe/edit-recipe.component';
 import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-recipe/delete-recipe.component';
 import { LikeRecipeComponent } from './recipe-card/like-recipe/like-recipe.component';
 import { ShareRecipeComponent } from './recipe-card/share-recipe/share-recipe.component';
@@ -30,7 +29,6 @@ import { ShareRecipeComponent } from './recipe-card/share-recipe/share-recipe.co
     EditRecipeButtonComponent,
     EditRecipeDialog,
     IngredientFormComponent,
-    EditRecipeComponent,
     DeleteRecipeComponent,
     DeleteRecipeDialog,
     LikeRecipeComponent,
