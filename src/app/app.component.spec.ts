@@ -3,8 +3,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
 
 import { NavComponent } from './nav/nav.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
+import { BannerComponent } from './banner/banner.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -12,11 +12,12 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, NavComponent],
+      declarations: [AppComponent],
       imports: [
         HttpClientTestingModule, 
         AppRoutingModule,
-        MatToolbarModule
+        NavComponent,
+        BannerComponent
       ],
     }).compileComponents();
   }));

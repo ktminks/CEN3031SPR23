@@ -10,11 +10,20 @@ export class DataValidationService {
 
     recipeData.forEach((recipe: any) => {
       const ingredients: Ingredient[] = recipe.ingredients.map((ingredient: string) => {
-        const [name, amount, amountType] = ingredient.split(',');
-        
-        return { name, amount: parseFloat(amount), amountType };
-      });
+        let amount, amountType, name, delimiter;
 
+        if (ingredient.includes(', ')) delimiter = ', ';
+        else if (ingredient.includes(',')) delimiter = ',';
+        else delimiter = ' ';
+        
+        if (typeof(ingredient.split(delimiter)[0]) == 'number' || parseInt(ingredient.split(delimiter)[0]))
+          [amount, amountType, name] = ingredient.split(delimiter);
+        else 
+          [name, amount, amountType] = ingredient.split(delimiter);
+
+        return { amount: parseFloat(amount.trim()), amountType, name };
+      });
+      console.table(ingredients);
       validatedRecipes.push({
         ...recipe,
         ingredients,
