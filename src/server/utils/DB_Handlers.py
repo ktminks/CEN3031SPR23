@@ -30,9 +30,9 @@ def add_recipe(recipe):
     return {'_id': str(result.inserted_id)}
 
 def edit_recipe(recipe_id, edited_data):
-    result = collection.edit_one({'_id': ObjectId(recipe_id)}, {'$set': edited_data})
+    result = collection.update_one({'_id': ObjectId(recipe_id)}, {'$set': edited_data})
     if result.modified_count > 0:
-        return {'result': 'Recipe editd'}
+        return {'result': 'Recipe edited'}
     else:
         return {'error': 'Recipe not found or not modified'}
 
