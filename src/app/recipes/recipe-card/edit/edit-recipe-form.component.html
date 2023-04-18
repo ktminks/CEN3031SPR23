@@ -1,12 +1,5 @@
-<h1 mat-dialog-title>Recipe</h1>
+<h1 mat-dialog-title>Edit Recipe</h1>
 <div mat-dialog-content>
-  <mat-form-field appearance="fill">
-    <mat-label>Date (MM/DD/YYYY)</mat-label>
-    <input matInput [matDatepicker]="picker" [(ngModel)]="data.date" />
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-  <br>
   <mat-form-field appearance="fill">
     <mat-label>Title</mat-label>
     <input matInput [(ngModel)]="data.name" required />
