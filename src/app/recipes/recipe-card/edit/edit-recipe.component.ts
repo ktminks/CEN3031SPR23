@@ -55,7 +55,7 @@ export class EditRecipeButtonComponent{
         // TODO: split ingredients string into array of Ingredients objects
         ingredients: this.ingredients , //= this.recipe.ingredients
         // TODO: split instructions string into array of strings
-        instructions: this.instructions , //= toString(this.recipe.instructions)
+        instructions: this.instructions = this.recipe.instructions.toString(),
         // TODO: handle empty optional fields
         image: this.image = this.recipe.image,
         tags: this.tags = this.recipe.tags,
