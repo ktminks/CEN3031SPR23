@@ -17,6 +17,9 @@ import { DeleteRecipeComponent,DeleteRecipeDialog } from './forms/delete-recipe/
 import { LikeRecipeComponent } from './forms/like-recipe/like-recipe.component';
 import { ShareRecipeComponent } from './forms/share-recipe/share-recipe.component';
 
+import { LoginSignupComponent } from '../login-signup/login-signup.component';
+import { PantryComponent } from '../pantry/pantry.component';
+import { ShoppingListComponent } from '../shopping-list/shopping-list.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { ShareRecipeComponent } from './forms/share-recipe/share-recipe.componen
     DeleteRecipeComponent,
     DeleteRecipeDialog,
     LikeRecipeComponent,
-    ShareRecipeComponent
+    ShareRecipeComponent,
+    LoginSignupComponent,
+    PantryComponent,
+    ShoppingListComponent,
   ],
   imports: [
     CommonModule,

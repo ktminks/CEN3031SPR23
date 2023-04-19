@@ -1,8 +1,8 @@
 import { Component, Input, EventEmitter, OnInit, Output  } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { MatDialog } from '@angular/material/dialog';
-import { LikeRecipeComponent } from './like-recipe/like-recipe.component';
-import { ShareRecipeComponent } from './share-recipe/share-recipe.component';
+import { LikeRecipeComponent } from '../forms/like-recipe/like-recipe.component';
+import { ShareRecipeComponent } from '../forms/share-recipe/share-recipe.component';
 
 @Component({
   selector: 'app-recipe-card',

@@ -6,6 +6,11 @@ import { PantryComponent } from './pantry/pantry.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 const routes: Routes = [
+  
+  { 
+    path: '', 
+    component: RecipesComponent,
+  },
   { 
     path: 'login-signup',
     component: LoginSignupComponent 
@@ -17,11 +22,6 @@ const routes: Routes = [
   { 
     path: 'shopping-list', 
     component: ShoppingListComponent
-  },
-  
-  { 
-    path: '', 
-    component: RecipesComponent
   },
     ];
 
