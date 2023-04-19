@@ -11,8 +11,8 @@ interface DialogData {
     id: number;
     date: string;
     name: string;
-    ingredients: string[];
-    instructions: string[];
+    ingredients: string;
+    instructions: string;
     image: string;
     tags: string;
     rating: number;
@@ -41,7 +41,8 @@ export class EditRecipeButtonComponent{
       data: {        
         ...this.currentRecipe = {
           ...this.recipe,
-          ingredients: this.recipe.ingredients.map((i) => `${i.amount} ${i.amountType} ${i.name}`),
+          ingredients: this.recipe.ingredients.map((i) => `${i.amount} ${i.amountType} ${i.name}`).join('\n'),
+          instructions: this.recipe.instructions.join('\n'),
         },
       }
       
