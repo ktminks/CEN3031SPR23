@@ -7,16 +7,15 @@ import { ApiService } from '../services/api.service';
 import { RecipesComponent } from './recipes.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { AddRecipeButtonComponent,
-         AddRecipeDialog } from './forms/add/add-recipe.component';
+         AddRecipeDialog } from './forms/add-recipe/add-recipe.component';
 import { EditRecipeButtonComponent,
-         EditRecipeDialog } from './recipe-card/edit/edit-recipe.component';
-import { IngredientFormComponent } from './forms/ingredients/ingredient-form.component';
+         EditRecipeDialog } from './forms/edit-recipe/edit-recipe.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/material.module';
-import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-recipe/delete-recipe.component';
-import { LikeRecipeComponent } from './recipe-card/like-recipe/like-recipe.component';
-import { ShareRecipeComponent } from './recipe-card/share-recipe/share-recipe.component';
+import { DeleteRecipeComponent,DeleteRecipeDialog } from './forms/delete-recipe/delete-recipe.component';
+import { LikeRecipeComponent } from './forms/like-recipe/like-recipe.component';
+import { ShareRecipeComponent } from './forms/share-recipe/share-recipe.component';
 
 
 
@@ -28,7 +27,6 @@ import { ShareRecipeComponent } from './recipe-card/share-recipe/share-recipe.co
     AddRecipeDialog,
     EditRecipeButtonComponent,
     EditRecipeDialog,
-    IngredientFormComponent,
     DeleteRecipeComponent,
     DeleteRecipeDialog,
     LikeRecipeComponent,
