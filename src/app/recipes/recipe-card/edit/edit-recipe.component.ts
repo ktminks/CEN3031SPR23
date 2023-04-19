@@ -53,7 +53,7 @@ export class EditRecipeButtonComponent{
         date: new Date(),
         name: this.name = this.recipe.name,
         // TODO: split ingredients string into array of Ingredients objects
-        ingredients: this.ingredients , //= this.recipe.ingredients
+        ingredients: this.ingredients = JSON.stringify(this.recipe.ingredients),
         // TODO: split instructions string into array of strings
         instructions: this.instructions = this.recipe.instructions.toString(),
         // TODO: handle empty optional fields
