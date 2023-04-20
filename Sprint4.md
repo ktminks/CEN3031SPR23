@@ -7,9 +7,9 @@
 
 ## Front-end
 
-Work (to) Completed
+Work Completed
 
-- Test functional integration (especially edit)
+- Mostly functional integration (especially edit)
 
 Unit Tests:
 
@@ -28,10 +28,9 @@ Cypress Tests:
 
 ## Back-end
 
-Work (to) Completed:
+Work Completed:
 
-- KT: Fix 'edit' functionality (currently non-functional boilerplate code)
-
+- KT: Fixed 'edit' functionality
 
 Unit Tests:
 

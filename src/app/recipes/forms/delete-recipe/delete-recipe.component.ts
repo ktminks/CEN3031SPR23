@@ -1,35 +1,40 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {Inject, OnInit } from '@angular/core';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
+import { Inject, Input } from '@angular/core';
+import { RecipeDataService } from 'src/app/services/recipe-data.service';
 
 @Component({
   selector: 'app-delete-recipe',
   templateUrl: './delete-recipe-dialog.component.html',
-  styleUrls: ['./delete-recipe.component.scss']
+  styleUrls: ['../form.component.scss'],
 })
 export class DeleteRecipeDialog {
   message = '';
+  delete = false;
 
   constructor(
     private dialogRef: MatDialogRef<DeleteRecipeDialog>,
-    @Inject(MAT_DIALOG_DATA) data: { message: string }
+    @Inject(MAT_DIALOG_DATA) data: { message: string; delete: boolean }
   ) {
     this.message = data ? data.message : '';
   }
 }
 
-
-
 @Component({
   selector: 'app-delete-recipe-button',
   templateUrl: './delete-recipe.component.html',
-  styleUrls: ['./delete-recipe.component.scss']
+  styleUrls: ['../form.component.scss'],
 })
 export class DeleteRecipeComponent {
+  @Input() id !: string;
   title = 'matDialog';
   dataFromDialog: any;
-
-  constructor(public dialog: MatDialog) {}
+  delete!: boolean;
+  constructor(public dialog: MatDialog, private recipeDataService: RecipeDataService) {}
 
   confirmDialog() {
     const ref: MatDialogRef<DeleteRecipeDialog> = this.dialog.open(
@@ -39,11 +44,19 @@ export class DeleteRecipeComponent {
         height: '210px',
         data: {
           message: 'Are you sure to cancel without saving the data?',
+          delete: this.delete,
         },
         backdropClass: 'confirmDialogComponent',
         hasBackdrop: true,
       }
     );
+    ref.afterClosed().subscribe((result) => {
+      this.delete = result;
+      
+      if (this.delete) {
+        this.recipeDataService.deleteRecipe(this.id);
+      }
+      console.log(`The recipe was ${this.delete ? 'successfully' : 'not successfully'} deleted.`);
+    });
   }
 }
-

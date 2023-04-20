@@ -1,12 +1,10 @@
-
-<mat-toolbar id="navbar" color = "primary">
-    <span>
-        <h1 class="title">Recipe Book</h1>
-    </span>
+<mat-toolbar color="primary" id="navbar" >
+    <h1 class="title">Recipe Book</h1>
     <span id="nav-buttons">
-        <button mat-raised-button color="lightblue" routerLink="/recipes" routerLinkActive="active" ariaCurrentWhenActive="page">Recipes</button>
-        <button mat-raised-button color="lightblue" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Pantry</button>
-        <button mat-raised-button color="lightblue" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Shopping List</button>
-        <button mat-raised-button color="lightblue" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Login</button>
+        <button mat-raised-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Recipes</button>
+        <button mat-raised-button routerLink="/pantry" routerLinkActive="active" ariaCurrentWhenActive="page">Pantry</button>
+        <button mat-raised-button routerLink="/shopping-list" routerLinkActive="active" ariaCurrentWhenActive="page">Shopping List</button>
+        <button mat-raised-button routerLink="/login-signup" routerLinkActive="active" ariaCurrentWhenActive="page">Login</button>
     </span>
 </mat-toolbar>
+

@@ -12,7 +12,9 @@ def get_all_recipes():
     recipes = []
     for recipe in results:
         recipe['_id'] = str(recipe['_id'])
-        recipes.append(recipe)
+        newRecipe = recipe
+        newRecipe['id'] = recipe['_id']
+        recipes.append(newRecipe)
     return recipes
 
 def get_recipe(recipe_id):
@@ -22,8 +24,6 @@ def get_recipe(recipe_id):
         return result
     else:
         return {'error': 'Recipe not found'}
-
-# Everything after this line is untested, AI generated code
 
 def add_recipe(recipe):
     result = collection.insert_one(recipe)

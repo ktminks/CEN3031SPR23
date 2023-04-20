@@ -23,7 +23,7 @@ export class DataValidationService {
 
         return { amount: parseFloat(amount.trim()), amountType, name };
       });
-      console.table(ingredients);
+      // console.table(ingredients);
       validatedRecipes.push({
         ...recipe,
         ingredients,

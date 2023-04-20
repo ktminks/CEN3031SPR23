@@ -25,7 +25,7 @@ describe('DataValidationService', () => {
         notes: 'Test notes',
         source: 'Test source',
         date: '2022-11-20',
-        id: 1,
+        id: "1",
       },
     ];
 

@@ -27,4 +27,26 @@ export class RecipeDataService {
       this._recipes.next(validatedRecipes);
     });
   }
+
+  deleteRecipe(id: string) {
+    this.apiService.deleteRecipe(id).subscribe(() => {
+      this.loadRecipes();
+    });
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.apiService.addRecipe(recipe).subscribe(() => {
+      this.loadRecipes();
+    });
+  }
+
+  updateRecipe(recipe: Recipe) {
+    this.apiService.updateRecipe(recipe).subscribe(() => {
+      this.loadRecipes();
+    });
+  }
+
+  getRecipe(id: string) {
+    return this.apiService.getRecipe(id);
+  }
 }

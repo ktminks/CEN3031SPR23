@@ -7,16 +7,19 @@ import { ApiService } from '../services/api.service';
 import { RecipesComponent } from './recipes.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { AddRecipeButtonComponent,
-         AddRecipeDialog } from './forms/add/add-recipe.component';
+         AddRecipeDialog } from './forms/add-recipe/add-recipe.component';
 import { EditRecipeButtonComponent,
-         EditRecipeDialog } from './forms/edit/edit-recipe.component';
-import { IngredientFormComponent } from './forms/ingredients/ingredient-form.component';
+         EditRecipeDialog } from './forms/edit-recipe/edit-recipe.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/material.module';
-import { EditRecipeComponent } from './recipe-card/edit-recipe/edit-recipe.component';
-import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-recipe/delete-recipe.component';
+import { DeleteRecipeComponent,DeleteRecipeDialog } from './forms/delete-recipe/delete-recipe.component';
+import { LikeRecipeComponent } from './forms/like-recipe/like-recipe.component';
+import { ShareRecipeComponent } from './forms/share-recipe/share-recipe.component';
 
+import { LoginSignupComponent } from '../login-signup/login-signup.component';
+import { PantryComponent } from '../pantry/pantry.component';
+import { ShoppingListComponent } from '../shopping-list/shopping-list.component';
 
 
 @NgModule({
@@ -27,10 +30,13 @@ import { DeleteRecipeComponent,DeleteRecipeDialog } from './recipe-card/delete-r
     AddRecipeDialog,
     EditRecipeButtonComponent,
     EditRecipeDialog,
-    IngredientFormComponent,
-    EditRecipeComponent,
     DeleteRecipeComponent,
-    DeleteRecipeDialog
+    DeleteRecipeDialog,
+    LikeRecipeComponent,
+    ShareRecipeComponent,
+    LoginSignupComponent,
+    PantryComponent,
+    ShoppingListComponent,
   ],
   imports: [
     CommonModule,

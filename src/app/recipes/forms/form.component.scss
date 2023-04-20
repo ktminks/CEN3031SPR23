@@ -1,3 +1,11 @@
+* {
+  width: 100%;
+}
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
 #modal {
   margin: 10px;
   padding: 30px;
@@ -13,9 +21,6 @@ h1, p, div {
   align-items: stretch;
 }
 
-#form-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
+#add-button {
+  margin: 10px;
 }

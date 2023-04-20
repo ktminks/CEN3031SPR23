@@ -1,23 +1,29 @@
-import {NgModule} from '@angular/core';
-import {
-  RouterModule,
-  Routes,
-} from '@angular/router';  // CLI imports router
-
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';  // CLI imports router
 import { RecipesComponent } from './recipes/recipes.component';
+import { LoginSignupComponent } from './login-signup/login-signup.component';
+import { PantryComponent } from './pantry/pantry.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-  { path: 'recipes', component: RecipesComponent,
-      children: [
-          { path: '', component: RecipesComponent},
-          // { path: ':id', component: RecipeDetailComponent},
-          // { path: ':id/edit', component: RecipeEditComponent}
-          // { path: 'new', component: AddRecipeComponent}
-      ]
-    },
-    { path: '**', redirectTo: '/recipes', pathMatch: 'full' },
-  ];
+  
+  { 
+    path: '', 
+    component: RecipesComponent,
+  },
+  { 
+    path: 'login-signup',
+    component: LoginSignupComponent 
+  },
+  { 
+    path: 'pantry', 
+    component: PantryComponent
+  },
+  { 
+    path: 'shopping-list', 
+    component: ShoppingListComponent
+  },
+    ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

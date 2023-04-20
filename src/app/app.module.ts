@@ -11,15 +11,15 @@ import { RecipeModule } from './recipes/recipe.module';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+    NavComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule, 
     RecipeModule,
     AppRoutingModule, 
     BrowserAnimationsModule,
-    NavComponent,
-    BannerComponent,
   ],
   bootstrap: [AppComponent],
 })

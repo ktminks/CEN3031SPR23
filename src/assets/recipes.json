@@ -23,7 +23,7 @@
     "notes": "Add some red wine for a more authentic flavor.",
     "source": "Grandma's Kitchen",
     "date": "2022-12-01",
-    "id": 1
+    "id": "1"
   },
   {
     "name": "Spaghetti Carbonara",
@@ -50,7 +50,7 @@
     "notes": "This dish is best served immediately after making it.",
     "source": "Grandma's Cookbook",
     "date": "2022-10-01",
-    "id": 2
+    "id": "2"
   },
   {
     "name": "Chicken Tikka Masala",
@@ -82,7 +82,7 @@
     "notes": "This dish is best served immediately after making it.",
     "source": "Grandma's Cookbook",
     "date": "2022-10-01",
-    "id": 3
+    "id": "3"
   },
   {
     "name": "Chocolate Chip Cookies",
@@ -113,7 +113,7 @@
     "notes": "This dish is best served immediately after making it.",
     "source": "Grandma's Cookbook",
     "date": "2022-10-01",
-    "id": 4
+    "id": "4"
   },
   {
     "name": "Grilled Cheese Sandwich",
@@ -135,7 +135,7 @@
     "notes": "",
     "source": "Classic cookbook",
     "date": "2022-09-01",
-    "id": 5
+    "id": "5"
   },
   {
     "name": "Pancakes",
@@ -164,7 +164,7 @@
     "notes": "",
     "source": "Grandpa's kitchen",
     "date": "2022-06-01",
-    "id": 6
+    "id": "6"
   },
   {
     "name": "Lemon Chicken",
@@ -189,6 +189,6 @@
     "notes": "",
     "source": "Friend's recipe",
     "date": "2022-05-15",
-    "id": 7
+    "id": "7"
   }
 ]
