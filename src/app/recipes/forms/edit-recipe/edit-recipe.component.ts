@@ -5,27 +5,15 @@ import {
   MatDialogRef,
   MatDialog
 } from '@angular/material/dialog';
-import { Recipe } from '../../recipe.model';
+import { DialogData, Recipe } from '../../recipe.model';
 
-interface DialogData {
-    id: number;
-    date: string;
-    name: string;
-    ingredients: string;
-    instructions: string;
-    image: string;
-    tags: string;
-    rating: number;
-    notes: string;
-    source: string;
-  }
 
 // ----------------- Button -----------------
 
 @Component({
   selector: 'app-edit-recipe-button',
   templateUrl: 'edit-recipe-button.component.html',
-  styleUrls: ['edit-recipe-button.component.scss']
+  styleUrls: ['../form.component.scss']
 })
 
 export class EditRecipeButtonComponent{
@@ -53,7 +41,7 @@ export class EditRecipeButtonComponent{
         ${(result == undefined) 
           ? "Nothing submitted" 
           : `Edited recipe with id # ${result.id}
-          date: ${result.date.toLocaleString()}
+          date: ${result.date}
           name: ${result.name}
           ingredients: ${result.ingredients}
           instructions: ${result.instructions}
@@ -71,7 +59,7 @@ export class EditRecipeButtonComponent{
 @Component({
   selector: 'edit-recipe-form',
   templateUrl: 'edit-recipe-form.component.html',
-  styleUrls: ['edit-recipe-form.component.scss']
+  styleUrls: ['../form.component.scss']
 })
 
 export class EditRecipeDialog {

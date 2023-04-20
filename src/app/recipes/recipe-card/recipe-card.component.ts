@@ -10,22 +10,13 @@ import { ShareRecipeComponent } from '../forms/share-recipe/share-recipe.compone
   styleUrls: ['./recipe-card.component.scss'],
 })
 export class RecipeCardComponent implements OnInit {
-  @Input() recipe: Recipe = {
-    name: '',
-    ingredients: [],
-    instructions: [],
-    image: '',
-    tags: '',
-    rating: 0,
-    notes: '',
-    source: '',
-    date: '',
-    id: 0
-  };
-  ngOnInit(): void {}
-  constructor(private _matDialogLike: MatDialog,private _matDialogShare: MatDialog) {}
+  @Input() recipe!: Recipe;
   @Output() recipeEdited = new EventEmitter<Recipe>();
-  //constructor(private _matDialogShare: MatDialog) {}
+
+  ngOnInit(): void {}
+
+  constructor(private _matDialogLike: MatDialog,private _matDialogShare: MatDialog) {}
+
   onClickLike() {
     this._matDialogLike.open(LikeRecipeComponent,{
       height: '100px',

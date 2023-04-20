@@ -21,4 +21,20 @@ export class ApiService {
       })
     );
   }
+
+  deleteRecipe(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/delete/${id}`);
+  }
+
+  addRecipe(recipe: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/add`, recipe);
+  }
+
+  updateRecipe(recipe: any): Observable<any> {
+    return this.http.put(`${this.apiUrl} + '/edit/${recipe.id}`, recipe);
+  }
+
+  getRecipe(id: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
+  }
 }

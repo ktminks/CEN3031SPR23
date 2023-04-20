@@ -1,42 +1,48 @@
-<ng-container id="modal">
-  <h1 mat-dialog-title>Recipe</h1>
-  <div mat-dialog-content id="form-inputs">
+<div>
+  <h1 mat-dialog-title>New Recipe</h1>
+  <div mat-dialog-content>
     <mat-form-field appearance="fill">
       <mat-label>Title</mat-label>
       <input matInput [(ngModel)]="data.name" required />
     </mat-form-field>
+    
     <mat-form-field appearance="fill">
       <mat-label>Ingredients</mat-label>
-      <textarea matInput [(ngModel)]="data.ingredients" required placeholder="2 tbsp butter, 1 cup milk"></textarea>
+      <textarea matInput [(ngModel)]="data.ingredients" required></textarea>
     </mat-form-field>
+    
     <mat-form-field appearance="fill">
       <mat-label>Instructions</mat-label>
-      <textarea matInput [(ngModel)]="data.instructions" required ></textarea>
+      <textarea matInput [(ngModel)]="data.instructions" required></textarea>
     </mat-form-field>
-    <mat-divider></mat-divider>
+    
     <mat-form-field appearance="fill">
       <mat-label>Image (optional)</mat-label>
       <input matInput [(ngModel)]="data.image" />
     </mat-form-field>
+    
     <mat-form-field appearance="fill">
       <mat-label>Tags</mat-label>
       <input matInput [(ngModel)]="data.tags" />
     </mat-form-field>
+    
     <mat-form-field appearance="fill">
       <mat-label>Rating</mat-label>
       <input matInput [(ngModel)]="data.rating" />
     </mat-form-field>
+    
     <mat-form-field appearance="fill">
       <mat-label>Notes (optional)</mat-label>
       <textarea matInput [(ngModel)]="data.notes"></textarea>
     </mat-form-field>
+    
     <mat-form-field appearance="fill">
       <mat-label>Source (optional)</mat-label>
       <input matInput [(ngModel)]="data.source" />
     </mat-form-field>
   </div>
-  <div mat-dialog-actions id="form-buttons">
+  <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">No Thanks</button>
     <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Submit</button>
   </div>
-</ng-container>
+</div>
