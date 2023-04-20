@@ -69,7 +69,7 @@ from datetime import datetime
 url = "http://localhost:4200"
 
 class TestDB(unittest.TestCase):
-    def test_getAll(self):
+    def test_getAll1(self):
         #get all of the recipes in the database
         temp = table.find({})
         count = 0
@@ -78,10 +78,18 @@ class TestDB(unittest.TestCase):
             count = count + 1
         funct_test= getall_recipes("")
         self.assertEqual(count, len(funct_test))
-    def test_get(self):
+    def test_getAll2(self):
+        funct_test= getall_recipes("")
+        temp = list(table.find({}))
+        self.assertEqual(temp, funct_test)
+    def test_get1(self):
         #get the Chocolate Chip Cookies recipe in the database
         temp = table.find_one({}, {'Name': 'Chocolate Chip Cookies'})
         funct_test = get_recipe('Chocolate Chip Cookies')
+        self.assertEqual(temp, funct_test)
+    def test_get2(self):
+        temp = table.find_one({}, {'Name': 'Linguine al Limone'})
+        funct_test = get_recipe('Linguine al Limone')
         self.assertEqual(temp, funct_test)
 
 unittest.main(argv = [''], verbosity = 2, exit = False)
