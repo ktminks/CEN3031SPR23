@@ -34,7 +34,10 @@ Work Completed:
 
 Unit Tests:
 
-- aeriwugbnau
+- HTTP_Receive.py:
+  - Contains all API unit tests that handle data, including two GET tests, two GET ALL tests, and a DELETE test.
+- HTTP_Send.py:
+  - Contains all CREATE tests for the API, include five recipes that are sent to the API's POST function.
 
 [Back-end API documentation](https://documenter.getpostman.com/view/1766794/2s93RMTuYD)
 
