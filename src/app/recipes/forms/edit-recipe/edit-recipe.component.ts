@@ -6,6 +6,7 @@ import {
   MatDialog
 } from '@angular/material/dialog';
 import { DialogData, Recipe } from '../../recipe.model';
+import { RecipeDataService } from 'src/app/services/recipe-data.service';
 
 
 // ----------------- Button -----------------
@@ -20,7 +21,7 @@ export class EditRecipeButtonComponent{
   @Input() recipe!: Recipe;
   currentRecipe!: DialogData;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private recipeDataService: RecipeDataService) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditRecipeDialog, {
@@ -37,10 +38,12 @@ export class EditRecipeButtonComponent{
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Edit Recipe Form closed:
-        ${(result == undefined) 
-          ? "Nothing submitted" 
-          : `Edited recipe with id # ${result.id}
+      if (result == undefined) return;
+
+      this.recipeDataService.updateRecipe(result);
+      
+      console.log(`Edit Recipe Form closed: 
+        Edited recipe with id # ${result.id}
           date: ${result.date}
           name: ${result.name}
           ingredients: ${result.ingredients}
@@ -50,7 +53,7 @@ export class EditRecipeButtonComponent{
           rating: ${result.rating}
           notes: ${result.notes}
           source: ${result.source}`  
-        }`);
+        );
     });
   }
 }

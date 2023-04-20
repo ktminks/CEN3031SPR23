@@ -5,7 +5,8 @@ import {
   MatDialogRef,
   MatDialog
 } from '@angular/material/dialog';
-import { Recipe } from '../../recipe.model';
+import { DialogData, Recipe } from '../../recipe.model';
+import { RecipeDataService } from 'src/app/services/recipe-data.service';
 
 
 // ----------------- Button -----------------
@@ -17,9 +18,9 @@ import { Recipe } from '../../recipe.model';
 })
 
 export class AddRecipeButtonComponent{
-  newRecipe!: Recipe;
+  newRecipe!: DialogData;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private recipeDataService: RecipeDataService) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AddRecipeDialog, {
@@ -29,10 +30,12 @@ export class AddRecipeButtonComponent{
     });
 
     dialogRef.afterClosed().subscribe((result) => {
+      if (result == undefined) return;
+
+      this.recipeDataService.addRecipe(result);
+      
       console.log(`Add Recipe Form closed:
-        ${(result == undefined) 
-          ? "Nothing submitted" 
-          : `Added recipe with id # ${result.id}
+        Added recipe with id # ${result.id}
           date: ${result.date}
           name: ${result.name}
           ingredients: ${result.ingredients}
@@ -42,7 +45,7 @@ export class AddRecipeButtonComponent{
           rating: ${result.rating}
           notes: ${result.notes}
           source: ${result.source}`  
-        }`);
+        );
     });
   }
 }

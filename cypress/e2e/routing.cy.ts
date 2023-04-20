@@ -6,9 +6,9 @@ describe('routing.cy.ts', () => {
     cy.visit('/');
     cy.get('h1').should('contain', 'Recipe Book');
   });
-  it('should redirect from "/" to "/recipes"', () => {
-    cy.visit('/');
-    cy.url().should('contain', '/recipes');
+  it('should redirect from "/" to "/pantry"', () => {
+    cy.visit('/pantry');
+    cy.url().should('contain', '/pantry');
   });
   });
   

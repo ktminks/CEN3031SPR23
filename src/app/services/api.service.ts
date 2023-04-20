@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Recipe } from '../recipes/recipe.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,12 +27,14 @@ export class ApiService {
     return this.http.delete(`${this.apiUrl}/delete/${id}`);
   }
 
-  addRecipe(recipe: any): Observable<any> {
+  addRecipe(recipe: Recipe): Observable<any> {
     return this.http.post(`${this.apiUrl}/add`, recipe);
   }
 
-  updateRecipe(recipe: any): Observable<any> {
-    return this.http.put(`${this.apiUrl} + '/edit/${recipe.id}`, recipe);
+  updateRecipe(recipe: Recipe): Observable<any> {
+    const data = Object.entries(recipe).filter(entry => entry[1] !== undefined);
+    const filteredData = Object.fromEntries(data);
+    return this.http.put(`${this.apiUrl}/edit/${recipe.id}`, filteredData);
   }
 
   getRecipe(id: string): Observable<any> {
