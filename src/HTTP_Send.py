@@ -45,6 +45,32 @@ data3 = {
     "Date": json.dumps(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
     "ID": 3
 }
+data4 = {
+    "Email": "swe@ufl.edu",
+    "Name": "Best Homemade Brownies",
+    "Ingredients": ["1 1/2 Cups of Granulated Sugar", "3/4 Cup of All-Purpose Flour", "2/3 Cup of Cocoa Powder (Sifted)", "1/2 Cup of Powdered Sugar (Sifted)", "1/2 Cup of Dark Chocolate Chips", "3/4 Teaspoons of Sea Salt", "2 Large Eggs", "1/2 Cup of Canola Oil or Extra-Virgin Olive Oil", "2 Tablespoons of Water", "1/2 Teaspoon of Vanilla"],
+    "Instructions": ["Preheat the oven to 325°F. Lightly spray an 8x8 baking dish (not a 9x9 dish or your brownies will overcook) with cooking spray and line it with parchment paper. Spray the parchment paper.", "In a medium bowl, combine the sugar, flour, cocoa powder, powdered sugar, chocolate chips, and salt.", "In a large bowl, whisk together the eggs, olive oil, water, and vanilla.", "Sprinkle the dry mix over the wet mix and stir until just combined.", "Pour the batter into the prepared pan (it'll be thick - that's ok) and use a spatula to smooth the top. Bake for 40 to 48 minutes, or until a toothpick comes out with only a few crumbs attached (note: it's better to pull the brownies out early than to leave them in too long). Cool completely before slicing.*** Store in an airtight container at room temperature for up to 3 days. These also freeze well!"],
+    "Image": "NA",
+    "Tags": "NA",
+    "Rating": 4.91,
+    "Notes": "NA",
+    "Source": "https://www.loveandlemons.com/brownies-recipe/",
+    "Date": json.dumps(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
+    "ID": 4
+}
+data5 = {
+    "Email": "swe@ufl.edu",
+    "Name": "Chicken Stir-Fry",
+    "Ingredients": ["4 Cups of Water", "2 Cups of White Rice", "2/3 Cup of Soy Sauce", "1/4 Cup of Brown Sugar", "1 Tablespoon of Cornstarch", "1 Tablespoon of Minced Fresh Ginger", "1 Tablespoon of Minced Garlic", "1/4 Teaspoon of Red Pepper Flakes", "3 Skinless, Boneless Chicken Breast Halves (Thinly Sliced)", "2 Tablespoons Sesame Oil (Divided)", "1 Head of Broccoli (Broken into Florets)", "1 Onion (Cut into Large Chunks)", "1 Cup of Sliced Carrots", "1 (8 Ounce) Can of Sliced Water Chestnuts (Drained)", "1 Green Bell Pepper (Cut into Matchsticks)"],
+    "Instructions": ["Bring water and rice to a boil in a saucepan over high heat. Reduce heat to medium-low, cover, and simmer until rice is tender, and liquid has been absorbed, 20 to 25 minutes.", "Meanwhile, combine soy sauce, brown sugar, and cornstarch in a medium glass or ceramic bowl; stir until smooth. Stir in ginger, garlic, and red pepper flakes; add chicken and stir to coat. Cover and marinate in the refrigerator for at least 15 minutes.", "Heat 1 tablespoon sesame oil in a wok or large skillet over medium-high heat. Add broccoli, onion, carrots, water chestnuts, and bell pepper; cook and stir until just tender, about 5 minutes. Transfer vegetables into a dish; set aside.", "Heat remaining 1 tablespoon sesame oil in the same wok or skillet over medium-high heat. Add chicken, reserving marinade, and cook until just browned, about 2 minutes per side; stir in vegetables and reserved marinade. Bring to a boil; cook and stir until chicken is no longer pink in the center and vegetables are tender, 5 to 7 minutes. Serve over rice."],
+    "Image": "NA",
+    "Tags": "NA",
+    "Rating": 4.50,
+    "Notes": "NA",
+    "Source": "https://www.allrecipes.com/recipe/223382/chicken-stir-fry/",
+    "Date": json.dumps(datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
+    "ID": 5
+}
 
 # POST requests to the API and their status codes
 post_response = requests.post(url, json = data1)
@@ -53,8 +79,12 @@ post_response = requests.post(url, json = data2)
 print(post_response.status_code)
 post_response = requests.post(url, json = data3)
 print(post_response.status_code)
+post_response = requests.post(url, json = data4)
+print(post_response.status_code)
+post_response = requests.post(url, json = data5)
+print(post_response.status_code)
 
-# A GET request to the API, its status code, and its result
+'''# A GET request to the API, its status code, and its result
 get_response = requests.get(url, params = data1['Name'])
 print(get_response.status_code)
 for x in get_response:
@@ -62,4 +92,4 @@ for x in get_response:
 
 # A DELETE request to the API and its status code
 put_response = requests.delete(url, params = data1['Name'])
-print(get_response.status_code)
+print(get_response.status_code)'''
