@@ -4,7 +4,7 @@ from utils.DB_Handlers import *
 
 def setup_routes(app):
     api = Api(app, "/recipes")
-    api.add_resource(GetRecipe, '/', '/<id>')
+    api.add_resource(GetRecipe, '/', '<id>')
     api.add_resource(AddRecipe, '/add')
     api.add_resource(EditRecipe, '/edit/<id>')
     api.add_resource(DeleteRecipe, '/delete/<id>')

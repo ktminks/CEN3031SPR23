@@ -5,34 +5,23 @@ import {
   MatDialogRef,
   MatDialog
 } from '@angular/material/dialog';
-import { Recipe } from '../../recipe.model';
+import { DialogData, Recipe } from '../../recipe.model';
+import { RecipeDataService } from 'src/app/services/recipe-data.service';
 
-interface DialogData {
-    id: number;
-    date: string;
-    name: string;
-    ingredients: string;
-    instructions: string;
-    image: string;
-    tags: string;
-    rating: number;
-    notes: string;
-    source: string;
-  }
 
 // ----------------- Button -----------------
 
 @Component({
   selector: 'app-edit-recipe-button',
   templateUrl: 'edit-recipe-button.component.html',
-  styleUrls: ['edit-recipe-button.component.scss']
+  styleUrls: ['../form.component.scss']
 })
 
 export class EditRecipeButtonComponent{
   @Input() recipe!: Recipe;
   currentRecipe!: DialogData;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private recipeDataService: RecipeDataService) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditRecipeDialog, {
@@ -49,11 +38,13 @@ export class EditRecipeButtonComponent{
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Edit Recipe Form closed:
-        ${(result == undefined) 
-          ? "Nothing submitted" 
-          : `Edited recipe with id # ${result.id}
-          date: ${result.date.toLocaleString()}
+      if (result == undefined) return;
+
+      this.recipeDataService.updateRecipe(result);
+      
+      console.log(`Edit Recipe Form closed: 
+        Edited recipe with id # ${result.id}
+          date: ${result.date}
           name: ${result.name}
           ingredients: ${result.ingredients}
           instructions: ${result.instructions}
@@ -62,7 +53,7 @@ export class EditRecipeButtonComponent{
           rating: ${result.rating}
           notes: ${result.notes}
           source: ${result.source}`  
-        }`);
+        );
     });
   }
 }
@@ -71,7 +62,7 @@ export class EditRecipeButtonComponent{
 @Component({
   selector: 'edit-recipe-form',
   templateUrl: 'edit-recipe-form.component.html',
-  styleUrls: ['edit-recipe-form.component.scss']
+  styleUrls: ['../form.component.scss']
 })
 
 export class EditRecipeDialog {
